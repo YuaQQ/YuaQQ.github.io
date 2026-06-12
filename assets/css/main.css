@@ -4687,3 +4687,91 @@ input, select, textarea {
 		}
 
 	}
+
+/* ========== 自定义下拉菜单样式 (适配 Story 主题) ========== */
+
+/* 下拉菜单容器 */
+#nav .dropdown {
+    position: relative;
+}
+
+/* 下拉菜单内容 - 初始隐藏 */
+#nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;  /* 白色背景，与内容区一致 */
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);  /* 主题中常用的阴影 */
+    border-radius: 0;  /* 与主题保持一致的直角风格 */
+    list-style: none;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    min-width: 220px;
+    z-index: 1000;
+    border: solid 1px #eeeeee;  /* 主题中的边框颜色 */
+    border-top: none;
+}
+
+/* 下拉菜单项 */
+#nav .dropdown-menu li {
+    border-top: solid 1px #eeeeee;
+    padding: 0;
+}
+
+#nav .dropdown-menu li:first-child {
+    border-top: none;
+}
+
+/* 下拉菜单链接 */
+#nav .dropdown-menu a {
+    display: block;
+    padding: 0.85rem 1.5rem;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    color: #212931 !important;  /* 主题中的深色文字 */
+    text-decoration: none;
+    border-bottom: none !important;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* 下拉菜单悬停效果 */
+#nav .dropdown-menu a:hover {
+    background-color: #f5f5f5 !important;  /* 主题中的浅灰背景 */
+    color: #18bfef !important;  /* 主题中的品牌蓝色 */
+}
+
+/* 鼠标悬停时显示菜单 */
+#nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 调整导航栏原有链接的内边距，保持视觉一致 */
+#nav ul.links li.dropdown > a {
+    padding: 0 2rem;
+}
+
+/* 响应式：小屏幕时菜单全宽 */
+@media screen and (max-width: 980px) {
+    #nav .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+    }
+    
+    #nav .dropdown-menu a {
+        padding-left: 3rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff !important;
+    }
+    
+    #nav .dropdown-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
