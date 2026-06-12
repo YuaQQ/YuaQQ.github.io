@@ -168,16 +168,16 @@
 			// Move nav content on breakpoint change.
 				var $navContent = $nav.children();
 
-				breakpoints.on('>medium', function() {
+				// breakpoints.on('>medium', function() {
 
-					// NavPanel -> Nav.
-						$navContent.appendTo($nav);
+				// 	// NavPanel -> Nav.
+				// 		$navContent.appendTo($nav);
 
-					// Flip icon classes.
-						$nav.find('.icons, .icon')
-							.removeClass('alt');
+				// 	// Flip icon classes.
+				// 		$nav.find('.icons, .icon')
+				// 			.removeClass('alt');
 
-				});
+				// });
 
 				breakpoints.on('<=medium', function() {
 
