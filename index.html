@@ -237,96 +237,111 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				// 下拉菜单修复代码
-				// ========== 完整下拉菜单修复方案 ==========
+			    <!-- 自定义下拉菜单（绕过 CSS 裁剪问题） -->
 				(function() {
-					// 清除所有现有的下拉菜单
-					document.querySelectorAll('.fixed-dropdown-menu').forEach(m => m.remove());
-					
-					// 为每个 dropdown 创建新菜单
-					document.querySelectorAll('#nav .dropdown').forEach(dropdown => {
-						const link = dropdown.querySelector('a');
-						const originalMenu = dropdown.querySelector('.dropdown-menu');
+					// 等待页面加载完成
+					function initDropdowns() {
+						// 清除可能存在的旧菜单
+						document.querySelectorAll('.custom-dropdown-menu').forEach(m => m.remove());
 						
-						// 复制菜单内容
-						const newMenu = document.createElement('ul');
-						newMenu.className = 'fixed-dropdown-menu';
-						
-						// 复制原有菜单项
-						if (originalMenu) {
-							const items = originalMenu.querySelectorAll('li');
-							items.forEach(item => {
-								newMenu.appendChild(item.cloneNode(true));
-							});
-						} else {
-							// 默认内容
-							newMenu.innerHTML = `
-								<li><a href="bio/Bio_scope.html">COURSE CONTENT</a></li>
-								<li><a href="#">GAMES</a></li>
+						// 为每个导航项创建下拉菜单
+						document.querySelectorAll('#nav .dropdown').forEach(dropdown => {
+							const link = dropdown.querySelector('a');
+							const originalMenu = dropdown.querySelector('.dropdown-menu');
+							
+							// 创建新菜单
+							const newMenu = document.createElement('ul');
+							newMenu.className = 'custom-dropdown-menu';
+							
+							// 复制原有菜单内容
+							if (originalMenu) {
+								const items = originalMenu.querySelectorAll('li');
+								items.forEach(item => {
+									newMenu.appendChild(item.cloneNode(true));
+								});
+							} else {
+								// 默认内容
+								newMenu.innerHTML = `
+									<li><a href="bio/Bio_scope.html">COURSE CONTENT</a></li>
+									<li><a href="#">GAMES</a></li>
+								`;
+							}
+							
+							// 设置菜单样式
+							newMenu.style.cssText = `
+								display: none;
+								position: fixed;
+								background: white;
+								min-width: 200px;
+								box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+								border-radius: 0;
+								border: 1px solid #eeeeee;
+								list-style: none;
+								padding: 0.5rem 0;
+								margin: 0;
+								z-index: 100000;
+								font-family: "Source Sans Pro", Helvetica, sans-serif;
 							`;
-						}
-						
-						// 设置样式
-						newMenu.style.cssText = `
-							display: none;
-							position: fixed;
-							background: white;
-							min-width: 200px;
-							box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-							border-radius: 4px;
-							border: 1px solid #ddd;
-							list-style: none;
-							padding: 8px 0;
-							margin: 0;
-							z-index: 100000;
-						`;
-						
-						// 菜单项样式
-						newMenu.querySelectorAll('a').forEach(a => {
-							a.style.cssText = `
-								display: block;
-								padding: 8px 20px;
-								color: #333;
-								text-decoration: none;
-								font-size: 14px;
-							`;
-							a.addEventListener('mouseenter', () => {
-								a.style.backgroundColor = '#f0f0f0';
+							
+							// 菜单项样式
+							newMenu.querySelectorAll('a').forEach(a => {
+								a.style.cssText = `
+									display: block;
+									padding: 0.6rem 1.5rem;
+									color: #212931;
+									text-decoration: none;
+									font-size: 0.75rem;
+									font-weight: 900;
+									letter-spacing: 0.075em;
+									text-transform: uppercase;
+									transition: all 0.2s ease;
+								`;
+								a.addEventListener('mouseenter', () => {
+									a.style.backgroundColor = '#f5f5f5';
+									a.style.color = '#18bfef';
+								});
+								a.addEventListener('mouseleave', () => {
+									a.style.backgroundColor = 'transparent';
+									a.style.color = '#212931';
+								});
 							});
-							a.addEventListener('mouseleave', () => {
-								a.style.backgroundColor = 'transparent';
+							
+							document.body.appendChild(newMenu);
+							
+							// 悬停显示/隐藏逻辑
+							let hideTimeout;
+							
+							dropdown.addEventListener('mouseenter', () => {
+								clearTimeout(hideTimeout);
+								const rect = link.getBoundingClientRect();
+								newMenu.style.display = 'block';
+								newMenu.style.top = rect.bottom + 5 + 'px';
+								newMenu.style.left = rect.left + 'px';
 							});
-						});
-						
-						document.body.appendChild(newMenu);
-						
-						// 悬停显示菜单
-						let timeout;
-						dropdown.addEventListener('mouseenter', (e) => {
-							clearTimeout(timeout);
-							const rect = link.getBoundingClientRect();
-							newMenu.style.display = 'block';
-							newMenu.style.top = rect.bottom + 5 + 'px';
-							newMenu.style.left = rect.left + 'px';
-						});
-						
-						dropdown.addEventListener('mouseleave', () => {
-							timeout = setTimeout(() => {
+							
+							dropdown.addEventListener('mouseleave', () => {
+								hideTimeout = setTimeout(() => {
+									newMenu.style.display = 'none';
+								}, 150);
+							});
+							
+							newMenu.addEventListener('mouseenter', () => {
+								clearTimeout(hideTimeout);
+								newMenu.style.display = 'block';
+							});
+							
+							newMenu.addEventListener('mouseleave', () => {
 								newMenu.style.display = 'none';
-							}, 100);
+							});
 						});
-						
-						newMenu.addEventListener('mouseenter', () => {
-							clearTimeout(timeout);
-							newMenu.style.display = 'block';
-						});
-						
-						newMenu.addEventListener('mouseleave', () => {
-							newMenu.style.display = 'none';
-						});
-					});
+					}
 					
-					console.log('✅ 下拉菜单修复完成，请悬停测试 AP Biology');
+					// 页面加载完成后执行
+					if (document.readyState === 'loading') {
+						document.addEventListener('DOMContentLoaded', initDropdowns);
+					} else {
+						initDropdowns();
+					}
 				})();
 			</script>
 
