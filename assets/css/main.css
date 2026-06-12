@@ -4687,6 +4687,11 @@ input, select, textarea {
 
 	}
 
+/* 覆盖 #nav 的 overflow:hidden，避免下拉菜单被裁切 */
+#nav {
+    overflow: visible !important;
+}
+
 /* ========== 自定义下拉菜单样式 (适配 Story 主题) ========== */
 
 /* 下拉菜单容器 */
