@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Cell structure</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="cell-structure">Cell structure</h1>
+<h1 id="microscopy">Microscopy</h1>
+<h2 id="light-microscopy-lm">Light Microscopy (LM)</h2>
+<ul>
+<li>Uses visible light passed through specimen and glass lenses.</li>
+<li><strong>Magnification</strong>: ~1,000x.</li>
+<li><strong>Resolution</strong>: Can resolve detail finer than ~200 nm.</li>
+<li><strong>Contrast Enhancement Methods</strong>:
+<ul>
+<li><strong>Brightfield</strong>: Light passes directly; little contrast unless stained.</li>
+<li><strong>Phase-Contrast</strong>: Amplifies density variations in unstained, living cells.</li>
+<li><strong>Differential-Interference-Contrast (DIC)</strong>: Exaggerates density differences; appears 3D.</li>
+<li><strong>Fluorescence</strong>: Specific molecules labeled with fluorescent dyes/antibodies; absorb UV, emit visible light.</li>
+<li><strong>Confocal</strong>: Uses laser to eliminate out-of-focus light; creates sharp single-plane images; 3D reconstruction possible.</li>
+</ul>
+</li>
+</ul>
+<h2 id="electron-microscopy-em">Electron Microscopy (EM)</h2>
+<ul>
+<li>Uses a beam of electrons.</li>
+<li><strong>Resolution</strong>: ~2 nm.</li>
+<li><strong>Limitation</strong>: Cannot study living cells (specimen preparation kills cells).</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Scanning Electron Microscope (SEM)</strong>: Studies surface topography; sample coated with gold; produces 3D-like images.</li>
+<li><strong>Transmission Electron Microscope (TEM)</strong>: Studies internal structure; beam passes through thin sections; stained with heavy metals.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="basic-cell-components">Basic Cell Components</h1>
+<h2 id="external-structures">External Structures</h2>
+<ul>
+<li>Cell wall, capsule, flagellum, cilium, etc.</li>
+</ul>
+<h2 id="core-components">Core Components</h2>
+<ul>
+<li><strong>Plasma Membrane</strong>: Selective barrier.</li>
+<li><strong>Cytosol</strong>: Intracellular semifluid.</li>
+<li><strong>Chromosome</strong>: Stores genetic material; in nucleoid (prokaryotes) or nucleus (eukaryotes).</li>
+<li><strong>Ribosome</strong>: Protein assembly center.</li>
+</ul>
+<h2 id="endomembrane-system">Endomembrane System</h2>
+<ul>
+<li>Endoplasmic Reticulum (ER)</li>
+<li>Golgi Apparatus</li>
+<li>Lysosome (phagocytosis &amp; autophagy)</li>
+<li>Vacuoles</li>
+</ul>
+<h2 id="other-organelles">Other Organelles</h2>
+<ul>
+<li>Mitochondrion</li>
+<li>Peroxisome</li>
+<li>Plastids (in plants/algae)</li>
+</ul>
+<hr>
+<h1 id="organelle-details">Organelle Details</h1>
+<h2 id="peroxisome">Peroxisome</h2>
+<ul>
+<li>Single-membrane-bound metabolic compartment.</li>
+<li>Generates H₂O₂ by transferring H atoms to O₂.</li>
+<li>Functions:
+<ul>
+<li>Breaks down fatty acids for mitochondria.</li>
+<li>Detoxifies alcohol (in liver).</li>
+</ul>
+</li>
+<li>Contains <strong>catalase</strong> (marker enzyme) to convert H₂O₂ to water.</li>
+<li><strong>Glyoxysome</strong>: Specialized peroxisome in plant seeds; converts fatty acids to sugar for seedlings.</li>
+</ul>
+<h2 id="plastids-plantalgal-cells">Plastids (Plant/Algal Cells)</h2>
+<ul>
+<li>Membrane-bound; own DNA; replicate independently.</li>
+<li><strong>Leucoplast</strong> (non-pigmented):
+<ul>
+<li>Amyloplast: Starch synthesis.</li>
+<li>Elaioplast: Lipid synthesis.</li>
+<li>Proteinoplast: Protein synthesis.</li>
+</ul>
+</li>
+<li><strong>Chromoplast</strong>: Pigment synthesis/storage.</li>
+<li><strong>Etioplast</strong>: Develops in darkness; can become chloroplast.</li>
+<li><strong>Gerontoplast</strong>: From chloroplast during senescence; loses thylakoids.</li>
+</ul>
+<h2 id="protein-targeting-to-er">Protein Targeting to ER</h2>
+<ol>
+<li>Polypeptide synthesis begins on free ribosome.</li>
+<li>SRP (Signal Recognition Particle) binds signal peptide, halting synthesis.</li>
+<li>SRP binds receptor in ER membrane (forms pore).</li>
+<li>SRP leaves; synthesis resumes with translocation across membrane.</li>
+<li>Signal peptide cleaved.</li>
+<li>Polypeptide folds into final conformation.</li>
+</ol>
+<hr>
+<h1 id="cytoskeleton">Cytoskeleton</h1>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>Network of fibers organizing cell structure/activities.</li>
+<li><strong>Components</strong>: Microtubules, Microfilaments, Intermediate Filaments.</li>
+</ul>
+<h2 id="microtubules">Microtubules</h2>
+<ul>
+<li><strong>Structure</strong>: Hollow tube; wall of 13 protofilaments of α/β-tubulin dimers.</li>
+<li><strong>Diameter</strong>: 25 nm.</li>
+<li><strong>Polarity</strong>: Plus (+) and minus (–) ends.</li>
+<li><strong>Nucleotide</strong>: GTP.</li>
+<li><strong>Functions</strong>:
+<ul>
+<li>Cytosolic: Cell shape, polarity, chromosome movement, organelle transport.</li>
+<li>Axonemal: Cell motility (cilia/flagella).</li>
+</ul>
+</li>
+<li><strong>Dynamic Instability</strong>: Grow/shrink based on GTP-tubulin concentration.</li>
+</ul>
+<h2 id="microfilaments-actin-filaments">Microfilaments (Actin Filaments)</h2>
+<ul>
+<li><strong>Structure</strong>: Two intertwined chains of F-actin.</li>
+<li><strong>Diameter</strong>: 7 nm.</li>
+<li><strong>Monomers</strong>: G-actin (globular).</li>
+<li><strong>Polarity</strong>: Plus (+) and minus (–) ends.</li>
+<li><strong>Nucleotide</strong>: ATP.</li>
+<li><strong>Functions</strong>: Muscle contraction, cell locomotion, cytoplasmic streaming, cytokinesis, cell shape, intracellular transport.</li>
+</ul>
+<h2 id="intermediate-filaments">Intermediate Filaments</h2>
+<ul>
+<li><strong>Structure</strong>: Eight protofilaments joined end-to-end with staggered overlaps.</li>
+<li><strong>Diameter</strong>: 8-12 nm.</li>
+<li><strong>Polarity</strong>: None.</li>
+<li><strong>Nucleotide</strong>: None.</li>
+<li><strong>Functions</strong>: Structural support, cell shape, nuclear lamina, axon strength (neurofilaments), muscle fiber alignment (desmin).</li>
+<li><strong>Classes</strong>:
+<ul>
+<li>I/II: Cytokeratins (epithelial cells; mechanical strength).</li>
+<li>III: Vimentin (fibroblasts), Desmin (muscle), GFA protein (glial cells).</li>
+<li>IV: Neurofilament proteins (nerves; axon strength/size).</li>
+<li>V: Nuclear lamins (all eukaryotes; nuclear scaffold).</li>
+<li>VI: Nestin (neuronal stem cells).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="cytoskeletal-motors--motility">Cytoskeletal Motors &amp; Motility</h1>
+<h2 id="microtubule-based-transport">Microtubule-Based Transport</h2>
+<ul>
+<li><strong>Motor Proteins</strong>:
+<ul>
+<li><strong>Kinesins</strong>: Move toward (+) end (outbound/periphery).</li>
+<li><strong>Dynein</strong>: Moves toward (–) end (inbound/center).
+<ul>
+<li>Cytoplasmic dynein: Vesicle/organelle transport.</li>
+<li>Axonemal dynein: Powers cilia/flagella beating.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="cilia--flagella">Cilia &amp; Flagella</h2>
+<ul>
+<li><strong>Cilia</strong>: Short (2-10 μm); many per cell; beat parallel to surface.</li>
+<li><strong>Flagella</strong>: Long (1 μm to mm); undulatory motion; moves cell along axis.</li>
+<li><strong>Structure</strong>:
+<ul>
+<li><strong>Basal Body</strong>: Anchors; similar to centriole (9+0 microtubule triplets).</li>
+<li><strong>Axoneme</strong>: Core with 9 outer microtubule doublets + 2 central singlet microtubules (9+2 pattern).
+<ul>
+<li>Dynein arms connect doublets; ATP hydrolysis causes sliding → bending.</li>
+<li>Nexin links &amp; radial spokes coordinate sliding into bending.</li>
+</ul>
+</li>
+<li><strong>Primary Cilia</strong>: Sensory; 9+0 pattern (no central pair).</li>
+</ul>
+</li>
+</ul>
+<h2 id="microfilament-based-motors-myosins">Microfilament-Based Motors (Myosins)</h2>
+<ul>
+<li>Superfamily of actin-based motors using ATP.</li>
+<li>Functions: Endocytosis, muscle contraction, cytokinesis.</li>
+</ul>
+<hr>
+<h1 id="muscle-contraction">Muscle Contraction</h1>
+<h2 id="sarcomere-structure">Sarcomere Structure</h2>
+<ul>
+<li><strong>Sarcomere</strong>: Basic contractile unit of myofibril.</li>
+<li><strong>Bands</strong>:
+<ul>
+<li><strong>A band</strong>: Dark; contains thick filaments (myosin).</li>
+<li><strong>I band</strong>: Light; contains thin filaments (actin).</li>
+<li><strong>H zone</strong>: Center of A band (only thick filaments).</li>
+<li><strong>Z line</strong>: Middle of I band; defines sarcomere boundaries.</li>
+<li><strong>M line</strong>: Center; links myosin filaments.</li>
+</ul>
+</li>
+</ul>
+<h2 id="filaments">Filaments</h2>
+<ul>
+<li><strong>Thick Filaments</strong>: Myosin molecules in staggered array; heads form cross-bridges.</li>
+<li><strong>Thin Filaments</strong>: F-actin, tropomyosin, troponin complex (TnT, TnC, TnI).
+<ul>
+<li>TnT binds tropomyosin.</li>
+<li>TnC binds Ca²⁺.</li>
+<li>TnI inhibits contraction by binding actin.</li>
+</ul>
+</li>
+</ul>
+<h2 id="sliding-filament-model">Sliding-Filament Model</h2>
+<ul>
+<li>Muscle contraction = thin filaments slide past thick filaments; filament lengths don't change.</li>
+<li><strong>Regulation by Ca²⁺</strong>:
+<ul>
+<li>Low Ca²⁺: Tropomyosin blocks myosin-binding sites on actin.</li>
+<li>High Ca²⁺: Ca²⁺ binds TnC → conformational change → myosin binds actin → contraction.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="extracellular-structures">Extracellular Structures</h1>
+<h2 id="plant-cell-wall">Plant Cell Wall</h2>
+<ul>
+<li><strong>Primary Cell Wall</strong>: Thin, flexible; cellulose, hemicellulose, pectins, extensins.</li>
+<li><strong>Middle Lamella</strong>: Pectin-rich layer between adjacent primary walls.</li>
+<li><strong>Secondary Cell Wall</strong>: Thick, strong; cellulose + lignin; deposited inside primary wall.</li>
+</ul>
+<h2 id="animal-extracellular-matrix-ecm">Animal Extracellular Matrix (ECM)</h2>
+<ul>
+<li><strong>Components</strong>:
+<ul>
+<li><strong>Fibers</strong>: Collagen (strength), Elastin (elasticity).</li>
+<li><strong>Matrix</strong>: Proteoglycans (hydrated gel).</li>
+<li><strong>Adhesive Glycoproteins</strong>: Fibronectin (binds cells to ECM), Laminin.</li>
+</ul>
+</li>
+<li><strong>Integrins</strong>: Transmembrane receptors link intracellular microfilaments to ECM proteins.</li>
+<li><strong>Examples</strong>: Bone (rigid), Cartilage (mostly matrix), Connective tissue (gel-like).</li>
+</ul>
+<hr>
+<h1 id="cell-junctions">Cell Junctions</h1>
+<h2 id="plant-cells-plasmodesmata">Plant Cells: Plasmodesmata</h2>
+<ul>
+<li>Membrane-lined channels connecting cytoplasm of adjacent cells.</li>
+<li>Allow passage of water, solutes, proteins, RNA.</li>
+</ul>
+<h2 id="animal-cells">Animal Cells</h2>
+<ul>
+<li><strong>Anchoring Junctions (Desmosomes)</strong>:
+<ul>
+<li>Connect cells via proteins linked to intermediate filaments (keratin).</li>
+<li>Provide mechanical strength (e.g., epithelial tissues).</li>
+</ul>
+</li>
+<li><strong>Tight Junctions</strong>:
+<ul>
+<li>Seal adjacent cell membranes; prevent fluid leakage.</li>
+<li>Restrict lateral movement of membrane lipids/proteins.</li>
+</ul>
+</li>
+<li><strong>Gap Junctions</strong>:
+<ul>
+<li>Formed by connexins (form connexon channels).</li>
+<li>Allow direct cytoplasmic communication (ions, small molecules).</li>
+<li>Important in heart muscle, neurons, embryos.</li>
+</ul>
+</li>
+</ul>
+<p>Practice Questions (together with cell activities)</p>
+
+            
+            
+        </body>
+        </html>

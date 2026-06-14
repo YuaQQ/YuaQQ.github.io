@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Polymerase Chain Reaction &lpar;PCR&rpar;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="polymerase-chain-reaction-pcr">Polymerase Chain Reaction (PCR)</h1>
+<ul>
+<li><strong>Purpose</strong>: Amplify a specific target DNA segment <em>in vitro</em></li>
+<li><strong>Reagents Required</strong>:
+<ul>
+<li>DNA template</li>
+<li>Buffer</li>
+<li>Primers</li>
+<li>Deoxyribonucleotides (dNTPs)</li>
+<li><strong>Taq DNA polymerase</strong> (heat-stable)</li>
+</ul>
+</li>
+<li><strong>Process</strong> (Thermal Cycling):
+<ul>
+<li><strong>Denaturation</strong>: Heat separates DNA strands (~95°C)</li>
+<li><strong>Annealing</strong>: Primers bind to complementary sequences (~50–65°C)</li>
+<li><strong>Extension</strong>: Taq polymerase synthesizes new DNA strand (~72°C)</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>: Exponential amplification; after <em>n</em> cycles, ~2ⁿ copies of target DNA are produced.</li>
+</ul>
+<h2 id="gel-electrophoresis">Gel Electrophoresis</h2>
+<ul>
+<li><strong>Purpose</strong>: Separate DNA, RNA, or proteins by size and/or charge</li>
+<li><strong>Principle</strong>: Charged molecules migrate through a gel matrix under an electric field
+<ul>
+<li>Smaller molecules move faster and farther</li>
+<li>DNA is negatively charged → moves from cathode (−) to anode (+)</li>
+</ul>
+</li>
+<li><strong>Gel Types</strong>:
+<ul>
+<li><strong>Agarose</strong>: For larger DNA fragments (100 bp – 25 kb)</li>
+<li><strong>Polyacrylamide</strong>: For smaller DNA fragments or proteins (higher resolution)</li>
+</ul>
+</li>
+<li><strong>Visualization</strong>:
+<ul>
+<li>DNA: Stained with intercalating dyes (e.g., ethidium bromide)</li>
+<li><strong>DNA ladder</strong>: Used as a size reference</li>
+<li>Band intensity correlates with DNA amount</li>
+</ul>
+</li>
+</ul>
+<h2 id="southern-blotting">Southern Blotting</h2>
+<ul>
+<li><strong>Purpose</strong>: Detect specific DNA sequences within a complex mixture</li>
+<li><strong>Steps</strong>:
+<ol>
+<li><strong>Restriction Digest</strong>: Cut DNA with restriction enzymes</li>
+<li><strong>Gel Electrophoresis</strong>: Separate fragments by size</li>
+<li><strong>Blotting (Capillary Transfer)</strong>: Transfer DNA from gel to a nitrocellulose membrane</li>
+<li><strong>Hybridization</strong>: Incubate membrane with labeled <strong>probe</strong> complementary to target sequence</li>
+<li><strong>Detection</strong>: Visualize bound probe (autoradiography, chemiluminescence, colorimetry)</li>
+</ol>
+</li>
+<li><strong>Key Application</strong>: Identify specific genes, RFLP analysis, genetic fingerprinting</li>
+</ul>
+<h2 id="dna-sequencing">DNA Sequencing</h2>
+<ul>
+<li><strong>Sanger Sequencing (Chain Termination)</strong>:
+<ul>
+<li>For fragments &lt; 1000 bp</li>
+<li>Uses <strong>dideoxyribonucleotides (ddNTPs)</strong> that terminate DNA synthesis</li>
+<li>Each ddNTP is fluorescently tagged; fragments separated by capillary electrophoresis</li>
+</ul>
+</li>
+<li><strong>Next-Generation Sequencing (NGS) Types</strong>:
+<ul>
+<li><strong>ATAC-seq</strong>: Maps genome-wide chromatin accessibility</li>
+<li><strong>ChIP-seq</strong>: Identifies genomic binding sites of specific proteins</li>
+</ul>
+</li>
+</ul>
+<h2 id="dna-cloning--recombinant-dna-technology">DNA Cloning &amp; Recombinant DNA Technology</h2>
+<ul>
+<li><strong>Purpose</strong>: Insert a gene into a plasmid for amplification in bacteria</li>
+<li><strong>Key Components</strong>:
+<ul>
+<li><strong>Target gene</strong></li>
+<li><strong>Vector (plasmid)</strong>: Contains origin of replication (ori), antibiotic resistance gene (selection marker), and multiple cloning site (MCS)</li>
+<li><strong>Restriction Endonucleases (RE)</strong>: Cut DNA at specific sequences, producing sticky ends</li>
+<li><strong>DNA Ligase</strong>: Joins DNA fragments</li>
+<li><strong>Competent Bacterial Cells</strong>: For transformation</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ol>
+<li><strong>Digestion</strong>: Cut gene and plasmid with same RE</li>
+<li><strong>Ligation</strong>: Join gene and plasmid → recombinant plasmid</li>
+<li><strong>Transformation</strong>: Introduce plasmid into bacteria</li>
+<li><strong>Selection</strong>: Grow on antibiotic-containing media; only transformed bacteria survive</li>
+</ol>
+</li>
+<li><strong>Plasmid Features</strong>:
+<ul>
+<li><strong>ori</strong>: Origin of replication</li>
+<li><strong>Antibiotic resistance gene</strong> (e.g., KanR): Selection marker</li>
+<li><strong>lacI</strong>: Repressor gene for inducible expression</li>
+<li><strong>Rop gene</strong>: Regulates plasmid copy number</li>
+<li><strong>bom site</strong>: Required for conjugation</li>
+</ul>
+</li>
+</ul>
+<h2 id="dna-profiling">DNA Profiling</h2>
+<ul>
+<li><strong>Restriction Fragment Length Polymorphism (RFLP)</strong>:
+<ul>
+<li>DNA cut with RE, separated by gel electrophoresis</li>
+<li>Pattern of fragment lengths varies between individuals</li>
+</ul>
+</li>
+<li><strong>Short Tandem Repeats (STR)</strong>:
+<ul>
+<li>PCR amplification of regions with variable numbers of tandem repeats</li>
+<li>Fragment size differs based on repeat count; analyzed by gel electrophoresis</li>
+<li>Used in forensics and paternity testing</li>
+</ul>
+</li>
+</ul>
+<h2 id="genome-editing-crispr-cas9">Genome Editing: CRISPR-Cas9</h2>
+<ul>
+<li><strong>CRISPR</strong>: Clustered Regularly Interspaced Short Palindromic Repeats</li>
+<li><strong>Components</strong>:
+<ul>
+<li><strong>Guide RNA (gRNA)</strong>: Complementary to target DNA sequence</li>
+<li><strong>Cas9 enzyme</strong>: Endonuclease that cuts DNA</li>
+</ul>
+</li>
+<li><strong>Mechanism</strong>: gRNA guides Cas9 to specific genomic site → creates double-strand break (DSB)</li>
+<li><strong>DNA Repair Pathways</strong>:
+<ul>
+<li><strong>Non-Homologous End Joining (NHEJ)</strong>: Error-prone; leads to insertions/deletions (indels) → <strong>gene knockout</strong></li>
+<li><strong>Homology-Directed Repair (HDR)</strong>: Uses donor template for precise <strong>gene knock-in</strong> or modification</li>
+</ul>
+</li>
+<li><strong>CRISPR Variants</strong>:
+<ul>
+<li><strong>CRISPRi (Interference)</strong>: Uses deactivated Cas9 fused to repressor to silence gene expression (knockdown)</li>
+<li><strong>CRISPRa (Activation)</strong>: Uses deactivated Cas9 fused to activator to enhance gene expression</li>
+</ul>
+</li>
+</ul>
+<h2 id="plant-genetic-engineering-agrobacterium-tumefaciens">Plant Genetic Engineering: Agrobacterium tumefaciens</h2>
+<ul>
+<li><strong>Ti Plasmid</strong>: Natural vector from <em>Agrobacterium</em></li>
+<li><strong>Process</strong>: Recombinant Ti plasmid (with gene of interest) introduced into plant cells → T-DNA integrates into plant genome</li>
+<li><strong>Application</strong>: Create transgenic plants with new traits (e.g., pest resistance)</li>
+</ul>
+<h2 id="gene-expression-analysis">Gene Expression Analysis</h2>
+<ul>
+<li><strong>Northern Blot</strong>:
+<ul>
+<li>Detects specific mRNA by gel electrophoresis + hybridization with labeled probe</li>
+<li>Requires relatively large amount of RNA</li>
+</ul>
+</li>
+<li><strong>Quantitative PCR (qPCR / Real-Time PCR)</strong>:
+<ul>
+<li>Quantifies mRNA levels by measuring amplification in real time</li>
+<li><strong>Ct (Threshold Cycle)</strong>: Cycle at which fluorescence crosses threshold; lower Ct = higher expression</li>
+<li>Steps: RNA → cDNA (reverse transcription) → PCR with fluorescent probes</li>
+</ul>
+</li>
+<li><strong>RNA Sequencing (RNA-seq)</strong>:
+<ul>
+<li>High-throughput sequencing of entire transcriptome</li>
+</ul>
+</li>
+<li><strong>In Situ Hybridization</strong>:
+<ul>
+<li>Uses labeled probes to localize specific mRNA within intact tissue/organism</li>
+</ul>
+</li>
+<li><strong>DNA Microarray</strong>:
+<ul>
+<li>Measures expression of thousands of genes simultaneously</li>
+<li>Steps: Isolate mRNA → convert to fluorescently labeled cDNA → hybridize to microarray chip → scan fluorescence</li>
+</ul>
+</li>
+</ul>
+<h2 id="protein-detection-western-blot">Protein Detection: Western Blot</h2>
+<ul>
+<li><strong>Purpose</strong>: Detect and quantify specific proteins</li>
+<li><strong>Steps</strong>:
+<ol>
+<li><strong>Cell Lysis</strong>: Release proteins</li>
+<li><strong>Protein Quantification</strong>: Bradford assay</li>
+<li><strong>SDS-PAGE</strong>: Separate denatured proteins by size</li>
+<li><strong>Electroblotting</strong>: Transfer proteins to nitrocellulose membrane</li>
+<li><strong>Blocking</strong>: Incubate with nonspecific protein (e.g., BSA) to prevent nonspecific antibody binding</li>
+<li><strong>Primary Antibody Incubation</strong>: Binds target protein</li>
+<li><strong>Secondary Antibody Incubation</strong>: Binds primary antibody; conjugated to enzyme (e.g., HRP) or fluorophore</li>
+<li><strong>Detection</strong>: Add substrate → chemiluminescent/colorimetric signal</li>
+</ol>
+</li>
+<li><strong>Controls Needed</strong>: Loading control (e.g., actin), positive/negative controls</li>
+</ul>
+<h2 id="elisa-enzyme-linked-immunosorbent-assay">ELISA (Enzyme-Linked Immunosorbent Assay)</h2>
+<ul>
+<li><strong>Purpose</strong>: Detect and quantify specific proteins/antibodies in liquid samples</li>
+<li><strong>Common Types</strong>:
+<ul>
+<li><strong>Direct ELISA</strong>: Antigen immobilized; detected directly with labeled antibody</li>
+<li><strong>Indirect ELISA</strong>: Antigen immobilized; detected with primary antibody + labeled secondary antibody (higher sensitivity)</li>
+<li><strong>Sandwich ELISA</strong>: Capture antibody immobilized; binds antigen; detected with labeled detection antibody</li>
+</ul>
+</li>
+<li><strong>Detection</strong>: Enzymatic reaction produces color change; absorbance measured</li>
+</ul>
+<h2 id="rna-interference-rnai">RNA Interference (RNAi)</h2>
+<ul>
+<li><strong>Purpose</strong>: Silence gene expression post-transcriptionally</li>
+<li><strong>Mechanism</strong>: Synthetic double-stranded RNA (siRNA) or endogenous microRNA (miRNA) triggers degradation or translational inhibition of complementary mRNA</li>
+<li><strong>Perfect complementarity</strong> → mRNA degradation</li>
+<li><strong>Imperfect complementarity</strong> → blocks translation</li>
+</ul>
+<h2 id="comparison-of-blotting-techniques">Comparison of Blotting Techniques</h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Target Molecule</th>
+<th>Gel Type</th>
+<th>Transfer Method</th>
+<th>Probe</th>
+<th>Detection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Southern Blot</strong></td>
+<td>DNA (ds)</td>
+<td>Agarose</td>
+<td>Capillary</td>
+<td>DNA (labeled)</td>
+<td>Autoradiography / Chemiluminescence</td>
+</tr>
+<tr>
+<td><strong>Northern Blot</strong></td>
+<td>mRNA (ss)</td>
+<td>Formaldehyde-agarose</td>
+<td>Capillary</td>
+<td>cDNA/cRNA (labeled)</td>
+<td>Autoradiography / Chemiluminescence</td>
+</tr>
+<tr>
+<td><strong>Western Blot</strong></td>
+<td>Protein</td>
+<td>Polyacrylamide</td>
+<td>Electric (electroblotting)</td>
+<td>Primary antibody → Secondary antibody</td>
+<td>Chemiluminescence / Colorimetric</td>
+</tr>
+</tbody>
+</table>
+<p>Practice Questions (with biochemistry)</p>
+
+            
+            
+        </body>
+        </html>

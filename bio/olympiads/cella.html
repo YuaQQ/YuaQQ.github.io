@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Cell activities</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="cell-activities">Cell activities</h1>
+<h1 id="cell-signaling">Cell Signaling</h1>
+<h2 id="electrical-signaling">Electrical Signaling</h2>
+<ul>
+<li><strong>Speed</strong>: Fast, non-persistent.</li>
+<li><strong>Mechanism</strong>: Transmission of ions between cytoplasm of neighboring cells via gap junctions.</li>
+<li><strong>Example</strong>: Cardiac muscle cell contraction.</li>
+</ul>
+<h2 id="chemical-signaling-reception--transduction--response">Chemical Signaling (Reception – Transduction – Response)</h2>
+<ul>
+<li><strong>Speed</strong>: Slower, prolonged effect.</li>
+<li><strong>Ligand Types</strong>:
+<ul>
+<li><strong>Hydrophilic Ligands</strong>:
+<ul>
+<li><strong>Peptide hormones</strong>: Insulin, growth factors (FGF, IGF, TGF, EGF).</li>
+<li><strong>Amine hormones</strong>.</li>
+<li><strong>Adrenal medulla hormones</strong>: Epinephrine, norepinephrine.</li>
+</ul>
+</li>
+<li><strong>Hydrophobic Ligands</strong>:
+<ul>
+<li><strong>Steroid hormones</strong>.</li>
+<li><strong>Sex hormones</strong>: Estradiol, testosterone.</li>
+<li><strong>Adrenocortical hormones</strong>:
+<ul>
+<li>Glucocorticoids (e.g., cortisol).</li>
+<li>Mineralocorticoids (e.g., aldosterone).</li>
+</ul>
+</li>
+<li><strong>Thyroid hormones</strong>: Triiodothyronine (T₃), thyroxine (T₄).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Signaling Distance Types</strong>:
+<ul>
+<li><strong>Autocrine</strong>: Ligand acts on the cell that produced it.</li>
+<li><strong>Paracrine</strong>: Ligand diffuses to act on nearby cells/tissues.</li>
+<li><strong>Juxtacrine</strong>: Ligand acts on a target in direct physical contact.</li>
+</ul>
+</li>
+</ul>
+<h2 id="hydrophilic-vs-hydrophobic-ligand-signaling">Hydrophilic vs. Hydrophobic Ligand Signaling</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Hydrophilic Ligand</th>
+<th>Hydrophobic Ligand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Release</strong></td>
+<td>Exocytosis</td>
+<td>Simple diffusion</td>
+</tr>
+<tr>
+<td><strong>Circulation</strong></td>
+<td>Dissolved in plasma</td>
+<td>Bound to carrier protein</td>
+</tr>
+<tr>
+<td><strong>Receptor Location</strong></td>
+<td>Cell surface</td>
+<td>Intracellular (cytoplasmic/nuclear)</td>
+</tr>
+<tr>
+<td><strong>Reception</strong></td>
+<td>1. Ligand binds extracellular domain of receptor (e.g., GPCR).<br>2. Conformational change in intracellular domain.<br>3. Effector proteins activated to synthesize second messengers.</td>
+<td>1. Ligand diffuses through membrane.<br>2. Binds cytoplasmic/nuclear receptors to form complex.</td>
+</tr>
+<tr>
+<td><strong>Transduction</strong></td>
+<td>1. Activated enzyme synthesizes second messenger OR ligand-gated ion channels open (ion influx).<br>2. Second messengers (e.g., cAMP, IP₃) diffuse and activate downstream proteins.<br>3. Sequential enzymatic reactions (phosphorylation cascades) relay &amp; amplify signal.</td>
+<td>(Occurs via receptor-ligand complex directly affecting gene expression or cellular processes.)</td>
+</tr>
+<tr>
+<td><strong>Response</strong></td>
+<td>Changes in cellular activities: cell growth, apoptosis, gene expression, secretion.</td>
+<td>Changes in gene expression and cellular metabolism.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gpcr-signaling-pathway">GPCR Signaling Pathway</h2>
+<ul>
+<li><strong>Reception</strong>: Ligand binds GPCR.</li>
+<li><strong>Transduction</strong>:
+<ol>
+<li>GPCR recruits G protein.</li>
+<li>G protein exchanges GDP for GTP → activated.</li>
+<li>Activated G protein activates effector enzyme (e.g., adenylyl cyclase).</li>
+<li>Effector enzyme synthesizes second messenger (e.g., cAMP).</li>
+<li>Second messenger activates downstream kinase (e.g., PKA) → phosphorylation cascade.</li>
+</ol>
+</li>
+<li><strong>Response</strong>: Cellular change (e.g., glycogen breakdown via epinephrine signaling).</li>
+</ul>
+<h2 id="protein-kinase-associated-receptor-signaling-eg-growth-factors">Protein Kinase-Associated Receptor Signaling (e.g., Growth Factors)</h2>
+<ul>
+<li><strong>Reception</strong>: Ligand binds receptor → receptor dimerization → auto-phosphorylation on tyrosine/serine/threonine residues.</li>
+<li><strong>Transduction</strong>:
+<ol>
+<li>Receptor activates Ras protein (GDP → GTP exchange).</li>
+<li>Activated Ras triggers phosphorylation cascade (e.g., MEK → MAPK → Jun/Ets).</li>
+</ol>
+</li>
+<li><strong>Response</strong>: Cell proliferation, apoptosis, differentiation.</li>
+</ul>
+<h3 id="example-growth-factors--receptors">Example Growth Factors &amp; Receptors:</h3>
+<table>
+<thead>
+<tr>
+<th>Growth Factor</th>
+<th>Target Cells</th>
+<th>Receptor Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Epidermal Growth Factor (EGF)</td>
+<td>Epithelial &amp; mesenchymal cells</td>
+<td>Tyrosine kinase</td>
+</tr>
+<tr>
+<td>Transforming Growth Factor α (TGFα)</td>
+<td>Same as EGF</td>
+<td>Tyrosine kinase</td>
+</tr>
+<tr>
+<td>Platelet-Derived Growth Factor (PDGF)</td>
+<td>Mesenchyme, smooth muscle, trophoblast</td>
+<td>Tyrosine kinase</td>
+</tr>
+<tr>
+<td>Transforming Growth Factor β (TGFβ)</td>
+<td>Fibroblastic cells</td>
+<td>Serine-threonine kinase</td>
+</tr>
+<tr>
+<td>Fibroblast Growth Factor (FGF)</td>
+<td>Mesenchyme, fibroblasts, many others</td>
+<td>Tyrosine kinase</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ion-channel-receptor-signaling-eg-neurotransmitters">Ion Channel Receptor Signaling (e.g., Neurotransmitters)</h2>
+<ul>
+<li><strong>Reception</strong>: Ligand binds receptor.</li>
+<li><strong>Transduction</strong>: Conformational change opens ion channel → facilitated diffusion of ions (Na⁺, Cl⁻, Ca²⁺ influx; K⁺ outflow).</li>
+<li><strong>Response</strong>: Change in membrane potential or cellular activity.</li>
+</ul>
+<hr>
+<h1 id="cellular-fluorescence">Cellular Fluorescence</h1>
+<h2 id="fluorophores">Fluorophores</h2>
+<ul>
+<li><strong>Excitation &amp; Emission</strong>: Always excited at shorter wavelength, emits at longer wavelength (absorbs more energy than emitted).</li>
+<li><strong>GFP Structure</strong>: Beta-pleated sheet-barrel with central fluorophore in hydrophobic environment.</li>
+<li><strong>GFP Fluorophore</strong>: -Ser65-Tyr66-Gly67- sequence.
+<ul>
+<li><strong>Tyrosine</strong>: Aromatic ring (can be substituted with Phe, Trp, His).</li>
+<li><strong>Glycine</strong>: Allows twisting to form loop → brings Tyr closer.</li>
+<li>Cyclization via -NH₂ of Tyr &amp; C=O of Ser → oxidation forms fluorophore.</li>
+</ul>
+</li>
+<li><strong>Fluorophore Formation</strong>: Conjugation in the peptide sequence creates fluorescence.</li>
+<li><strong>Variants via Amino Acid Substitutions</strong>:
+<ul>
+<li><strong>BFP</strong>: -Ser65-His66-Gly67-</li>
+<li><strong>Brighter GFP</strong>: -Thr65-Tyr66-Gly67-</li>
+<li><strong>CFP</strong>: -Ser65-Trp66-Gly67-</li>
+</ul>
+</li>
+<li><strong>Red Fluorescence (e.g., DsRed)</strong>: Extended conjugation system shifts emission to longer wavelengths.</li>
+</ul>
+<h2 id="excitation--emission-peaks-of-common-fluorophores">Excitation &amp; Emission Peaks of Common Fluorophores</h2>
+<table>
+<thead>
+<tr>
+<th>Fluorophore</th>
+<th>Excitation Peak</th>
+<th>Emission Peak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFP</td>
+<td>395 nm (violet)</td>
+<td>508 nm (green)</td>
+</tr>
+<tr>
+<td>BFP</td>
+<td>374 nm (UV)</td>
+<td>443 nm (blue)</td>
+</tr>
+<tr>
+<td>CFP</td>
+<td>435 nm (purple-blue)</td>
+<td>477 nm (cyan)</td>
+</tr>
+<tr>
+<td>DsRed</td>
+<td>558 nm (lime)</td>
+<td>583 nm (yellow)</td>
+</tr>
+</tbody>
+</table>
+<p>Practice Questions (together with cell structure)</p>
+
+            
+            
+        </body>
+        </html>
