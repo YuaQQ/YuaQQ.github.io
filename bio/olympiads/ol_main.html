@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Biology Olympiads Test Coverage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active dropdown">
+							<a href="biocell.html">Biochemistry, Biotechnology and Cellular Biology</a>
+                                <ul class="dropdown-menu">
+									<li><a href="chem.md">Biochemistry</a></li>
+									<li><a href="tech.md">Biotechnology</a></li>
+                                    <li><a href="cell.md">Cell Structure</a></li>
+                                    <li><a href="cella.md">Cell Activities</a></li>
+                                    <li><a href="respho.md">Respiration & Photosynthesis</a></li>
+                                </ul>
+                            <li><a href="tech.md">Biotechnology</a></li>
+							<li><a href="cell.md">Cell Strcture</a></li>
+              				<li><a href="cella.md">Cellular Activities</a></li>
+              				<li><a href="unit4.html">Cell Cycle & Signaling</a></li>
+              				<li><a href="unit5.html">Genetics</a></li>
+              				<li><a href="unit6.html">Gene Expression Regulation</a></li>
+              				<li><a href="unit7.html">Evolution</a></li>
+              				<li><a href="unit8.html">Ecology</a></li>
+						</ul>
+					
+					</nav>
+
+        <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+			    <!-- 自定义下拉菜单（绕过 CSS 裁剪问题） -->
+				(function() {
+					// 等待页面加载完成
+					function initDropdowns() {
+						// 清除可能存在的旧菜单
+						document.querySelectorAll('.custom-dropdown-menu').forEach(m => m.remove());
+						
+						// 为每个导航项创建下拉菜单
+						document.querySelectorAll('#nav .dropdown').forEach(dropdown => {
+							const link = dropdown.querySelector('a');
+							const originalMenu = dropdown.querySelector('.dropdown-menu');
+							
+							// 创建新菜单
+							const newMenu = document.createElement('ul');
+							newMenu.className = 'custom-dropdown-menu';
+							
+							// 复制原有菜单内容
+							if (originalMenu) {
+								const items = originalMenu.querySelectorAll('li');
+								items.forEach(item => {
+									newMenu.appendChild(item.cloneNode(true));
+								});
+							} else {
+								// 默认内容
+								newMenu.innerHTML = `
+									<li><a href="bio/Bio_scope.html">COURSE CONTENT</a></li>
+									<li><a href="#">GAMES</a></li>
+								`;
+							}
+							
+							// 设置菜单样式
+							newMenu.style.cssText = `
+								display: none;
+								position: fixed;
+								background: white;
+								min-width: 200px;
+								box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+								border-radius: 0;
+								border: 1px solid #eeeeee;
+								list-style: none;
+								padding: 0.5rem 0;
+								margin: 0;
+								z-index: 100000;
+								font-family: "Source Sans Pro", Helvetica, sans-serif;
+							`;
+							
+							// 菜单项样式
+							newMenu.querySelectorAll('a').forEach(a => {
+								a.style.cssText = `
+									display: block;
+									padding: 0.6rem 1.5rem;
+									color: #212931;
+									text-decoration: none;
+									font-size: 0.75rem;
+									font-weight: 900;
+									letter-spacing: 0.075em;
+									text-transform: uppercase;
+									transition: all 0.2s ease;
+								`;
+								a.addEventListener('mouseenter', () => {
+									a.style.backgroundColor = '#f5f5f5';
+									a.style.color = '#18bfef';
+								});
+								a.addEventListener('mouseleave', () => {
+									a.style.backgroundColor = 'transparent';
+									a.style.color = '#212931';
+								});
+							});
+							
+							document.body.appendChild(newMenu);
+							
+							// 悬停显示/隐藏逻辑
+							let hideTimeout;
+							
+							dropdown.addEventListener('mouseenter', () => {
+								clearTimeout(hideTimeout);
+								const rect = link.getBoundingClientRect();
+								newMenu.style.display = 'block';
+								newMenu.style.top = rect.bottom + 5 + 'px';
+								newMenu.style.left = rect.left + 'px';
+							});
+							
+							dropdown.addEventListener('mouseleave', () => {
+								hideTimeout = setTimeout(() => {
+									newMenu.style.display = 'none';
+								}, 150);
+							});
+							
+							newMenu.addEventListener('mouseenter', () => {
+								clearTimeout(hideTimeout);
+								newMenu.style.display = 'block';
+							});
+							
+							newMenu.addEventListener('mouseleave', () => {
+								newMenu.style.display = 'none';
+							});
+						});
+					}
+					
+					// 页面加载完成后执行
+					if (document.readyState === 'loading') {
+						document.addEventListener('DOMContentLoaded', initDropdowns);
+					} else {
+						initDropdowns();
+					}
+				})();
+			</script>
+</html>
