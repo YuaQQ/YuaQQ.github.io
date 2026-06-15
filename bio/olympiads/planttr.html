@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Plant Nutrient and Transport</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="plant-nutrient-and-transport">Plant Nutrient and Transport</h1>
+<h3 id="mineral-acquisition-by-roots"><strong>Mineral Acquisition by Roots</strong></h3>
+<ul>
+<li>Roots absorb water and minerals from soil.</li>
+<li><strong>Mycorrhizae</strong>: Symbiotic associations with fungal hyphae; increase absorption surface area.</li>
+</ul>
+<h3 id="transport-pathways-in-roots"><strong>Transport Pathways in Roots</strong></h3>
+<ul>
+<li><strong>Apoplastic Route</strong>: Through cell walls and extracellular spaces.</li>
+<li><strong>Symplastic Route</strong>: Through cytoplasm via plasmodesmata.</li>
+<li><strong>Transmembrane Route</strong>: Across cell membranes and walls.</li>
+<li><strong>Endodermis &amp; Casparian Strip</strong>: Final checkpoint; forces water/minerals to enter symplast for selective entry into stele.</li>
+</ul>
+<h3 id="long-distance-transport-bulk-flow"><strong>Long-Distance Transport: Bulk Flow</strong></h3>
+<ul>
+<li>Movement driven by pressure gradients.</li>
+<li><strong>Xylem Transport</strong>: Driven by negative pressure (transpiration pull).</li>
+<li><strong>Phloem Transport</strong>: Driven by positive pressure (pressure flow).</li>
+</ul>
+<h3 id="xylem-transport-mechanisms"><strong>Xylem Transport Mechanisms</strong></h3>
+<ul>
+<li><strong>Root Pressure</strong>: Minor push from root cortex (causes <strong>guttation</strong> in small plants).</li>
+<li><strong>Transpiration-Cohesion-Tension Theory</strong>:
+<ol>
+<li><strong>Transpiration</strong>: Water evaporates from leaf stomata.</li>
+<li><strong>Tension</strong>: Negative pressure pulls water column upward.</li>
+<li><strong>Cohesion</strong>: Hydrogen bonding between water molecules.</li>
+<li><strong>Adhesion</strong>: Water bonds to hydrophilic xylem walls.</li>
+</ol>
+</li>
+</ul>
+<h3 id="stomatal-regulation"><strong>Stomatal Regulation</strong></h3>
+<ul>
+<li><strong>Guard Cells</strong> control stomatal aperture via turgor pressure changes.</li>
+<li><strong>Opening Mechanism</strong>:
+<ol>
+<li>Proton pumps export H⁺.</li>
+<li>Voltage drives K⁺ influx.</li>
+<li>Water enters by osmosis → guard cells become turgid.</li>
+</ol>
+</li>
+<li><strong>Closing Mechanism</strong>: K⁺ efflux → water leaves → guard cells become flaccid.</li>
+<li><strong>Stimuli for Opening</strong>: Light, low CO₂, circadian rhythm.</li>
+<li><strong>Stimuli for Closing</strong>: Water deficiency (via <strong>abscisic acid, ABA</strong>), drought, high temperature, wind.</li>
+</ul>
+<h3 id="plant-adaptations-to-extreme-environments"><strong>Plant Adaptations to Extreme Environments</strong></h3>
+<ul>
+<li><strong>Halophytes</strong> (high salinity): Shrunken stomata, long roots, salt-secreting structures.</li>
+<li><strong>Xerophytes</strong> (dry habitats): Reduced leaf area, thick cuticles, night-opening stomata, water-storing tissues.</li>
+</ul>
+<h3 id="phloem-transport-translocation"><strong>Phloem Transport: Translocation</strong></h3>
+<ul>
+<li><strong>Phloem Sap</strong>: Aqueous solution high in sucrose.</li>
+<li><strong>Source-to-Sink Flow</strong>:
+<ul>
+<li><strong>Source</strong>: Organ producing/storing sugars (e.g., leaves).</li>
+<li><strong>Sink</strong>: Organ consuming/storing sugars (e.g., roots, fruits).</li>
+</ul>
+</li>
+<li><strong>Pressure Flow Model</strong>:
+<ol>
+<li><strong>Loading at Source</strong>: Sucrose actively transported into sieve tubes (via proton cotransport).</li>
+<li><strong>Water Entry</strong>: Lowers water potential; water enters from xylem by osmosis → increases turgor pressure.</li>
+<li><strong>Flow to Sink</strong>: Pressure gradient pushes sap toward sink.</li>
+<li><strong>Unloading at Sink</strong>: Sucrose removed; water exits back to xylem.</li>
+</ol>
+</li>
+</ul>
+<h3 id="plant-nutrition-essential-elements"><strong>Plant Nutrition: Essential Elements</strong></h3>
+<ul>
+<li><strong>Macronutrients</strong> (required in large amounts):
+<ul>
+<li>C, O, H, N, P, S, K, Ca, Si, Mg.</li>
+<li>Functions: Component of macromolecules, enzymes, chlorophyll, structural support.</li>
+</ul>
+</li>
+<li><strong>Micronutrients</strong> (required in trace amounts):
+<ul>
+<li>Na, Cl, Fe, Mn, B, Zn, Cu, Ni, Mo.</li>
+<li>Functions: Enzyme cofactors, redox reactions, specialized metabolism.</li>
+</ul>
+</li>
+<li><strong>Deficiency Symptoms</strong>:
+<ul>
+<li><strong>Nitrogen (N)</strong>: Chlorosis (yellowing) in older leaves; stunted growth.</li>
+<li><strong>Phosphorus (P)</strong>: Stunted growth; purple leaves (anthocyanin accumulation).</li>
+<li><strong>Potassium (K)</strong>: Marginal chlorosis/necrosis in older leaves.</li>
+<li><strong>Magnesium (Mg)</strong>: Interveinal chlorosis in older leaves.</li>
+</ul>
+</li>
+</ul>
+<h3 id="nitrogen-fixation"><strong>Nitrogen Fixation</strong></h3>
+<ul>
+<li><strong>Rhizobium</strong> bacteria in legume root nodules fix atmospheric N₂.</li>
+<li><strong>Leghemoglobin</strong> in nodules: &quot;Oxygen buffer&quot; maintains anaerobic conditions for nitrogenase activity.</li>
+</ul>
+<p>Practice Questions</p>
+
+            
+            
+        </body>
+        </html>

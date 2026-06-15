@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Plant Responses</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="plant-responses">Plant Responses</h1>
+<h3 id="signal-transduction-in-plants"><strong>Signal Transduction in Plants</strong></h3>
+<ul>
+<li><strong>Reception → Transduction → Response</strong>.</li>
+<li>Example: Light-induced de-etiolation (greening) in potatoes.</li>
+</ul>
+<h3 id="tropisms-directional-growth-responses"><strong>Tropisms: Directional Growth Responses</strong></h3>
+<ul>
+<li><strong>Positive Tropism</strong>: Growth toward stimulus.</li>
+<li><strong>Negative Tropism</strong>: Growth away from stimulus.</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Gravitropism</strong>: Response to gravity (roots: positive; shoots: negative).</li>
+<li><strong>Phototropism</strong>: Response to light (shoots: positive; roots: negative).</li>
+<li><strong>Thigmotropism</strong>: Response to touch (e.g., tendrils coiling).</li>
+</ul>
+</li>
+</ul>
+<h3 id="plant-hormones"><strong>Plant Hormones</strong></h3>
+<ul>
+<li><strong>Auxin (IAA)</strong>:
+<ul>
+<li>Produced in shoot tips; promotes cell elongation.</li>
+<li><strong>Polar transport</strong>; asymmetric distribution causes phototropism/gravitropism.</li>
+<li><strong>Mechanism</strong>: Stimulates proton pumps → acidifies cell wall → activates <strong>expansins</strong> → wall loosening → cell elongation.</li>
+<li>Controls apical dominance; involved in fruit development.</li>
+</ul>
+</li>
+<li><strong>Cytokinins</strong>:
+<ul>
+<li>Produced in roots; promote cell division.</li>
+<li>Work with auxin to control differentiation (high cytokinin: shoots; high auxin: roots).</li>
+<li>Delay senescence; antagonize apical dominance.</li>
+</ul>
+</li>
+<li><strong>Gibberellins</strong>:
+<ul>
+<li>Promote stem elongation, seed germination, fruit growth.</li>
+<li>In germination: Signal <strong>aleurone</strong> layer to hydrolyze endosperm starch.</li>
+</ul>
+</li>
+<li><strong>Abscisic Acid (ABA)</strong>:
+<ul>
+<li>Stress hormone; promotes stomatal closure, seed dormancy.</li>
+<li>Antagonizes growth hormones.</li>
+</ul>
+</li>
+<li><strong>Ethylene</strong>:
+<ul>
+<li>Gaseous hormone; promotes fruit ripening, senescence, leaf abscission.</li>
+<li><strong>Triple Response</strong> to mechanical stress: slows elongation, thickens stem, induces horizontal growth.</li>
+</ul>
+</li>
+<li><strong>Brassinosteroids</strong>:
+<ul>
+<li>Promote cell elongation and division; similar effects to auxin.</li>
+</ul>
+</li>
+</ul>
+<h3 id="light-responses-and-photoreceptors"><strong>Light Responses and Photoreceptors</strong></h3>
+<ul>
+<li><strong>Photomorphogenesis</strong>: Light effects on plant morphology.</li>
+<li><strong>Photoreceptors</strong>:
+<ul>
+<li><strong>Cryptochromes</strong> (blue light): Control hypocotyl elongation, stomatal opening, phototropism.</li>
+<li><strong>Phytochromes</strong> (red/far-red light): Control de-etiolation, seed germination, shade avoidance, flowering.</li>
+</ul>
+</li>
+<li><strong>Phytochrome Isomers</strong>:
+<ul>
+<li><strong>Pᵣ</strong> (inactive, red-absorbing).</li>
+<li><strong>Pᶠʳ</strong> (active, far-red-absorbing).</li>
+<li>Reversible by light; conversion marks day/night cycles.</li>
+</ul>
+</li>
+</ul>
+<h3 id="biological-rhythms-and-photoperiodism"><strong>Biological Rhythms and Photoperiodism</strong></h3>
+<ul>
+<li><strong>Circadian Rhythms</strong>: ~24-hour cycles; entrained by light/dark.</li>
+<li><strong>Photoperiodism</strong>: Response to day/night length.</li>
+<li><strong>Critical Night Length</strong>: Determines flowering response.
+<ul>
+<li><strong>Short-Day Plants</strong>: Flower when night length &gt; critical value (flower in fall/spring).</li>
+<li><strong>Long-Day Plants</strong>: Flower when night length &lt; critical value (flower in summer).</li>
+<li><strong>Day-Neutral Plants</strong>: Flower independent of photoperiod.</li>
+</ul>
+</li>
+<li><strong>Phytochrome Role in Flowering</strong>:
+<ul>
+<li><strong>Pᶠʳ inhibits flowering in short-day plants</strong>.</li>
+<li><strong>Pᶠʳ promotes flowering in long-day plants</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="plant-defenses-against-pathogens"><strong>Plant Defenses Against Pathogens</strong></h3>
+<ol>
+<li><strong>First Line</strong>: Physical barriers (epidermis, periderm).</li>
+<li><strong>Second Line: PAMP-Triggered Immunity</strong>:
+<ul>
+<li>Recognition of <strong>Pathogen-Associated Molecular Patterns (PAMPs)</strong>.</li>
+<li>Responses: <strong>Phytoalexin</strong> production, cell wall toughening.</li>
+</ul>
+</li>
+<li><strong>Third Line: Effector-Triggered Immunity</strong>:
+<ul>
+<li><strong>R genes</strong> encode R proteins that detect pathogen effectors.</li>
+<li><strong>Hypersensitive Response</strong>: Localized cell death to restrict pathogen.</li>
+<li><strong>Systemic Acquired Resistance</strong>: Long-lasting, whole-plant resistance via signaling molecules (e.g., salicylic acid).</li>
+</ul>
+</li>
+</ol>
+<p>Practice Questions</p>
+
+            
+            
+        </body>
+        </html>

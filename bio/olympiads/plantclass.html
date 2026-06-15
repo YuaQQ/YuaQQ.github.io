@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Plant Classification</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="plant-classification">Plant Classification</h1>
+<h3 id="characteristics-of-plants"><strong>Characteristics of Plants</strong></h3>
+<ul>
+<li>Sessile, multicellular organisms</li>
+<li>Cell walls made of cellulose</li>
+<li>Derived from embryos</li>
+<li>Adapted to land life</li>
+<li>Autotrophic through photosynthesis (contain chlorophyll a and b)</li>
+<li>Closest relatives: modern green algae (charophytes)</li>
+</ul>
+<h3 id="derived-traits-of-land-plants-not-in-charophytes"><strong>Derived Traits of Land Plants (Not in Charophytes)</strong></h3>
+<ul>
+<li><strong>Alternation of Generations</strong>: Life cycle alternates between multicellular haploid (gametophyte) and diploid (sporophyte) stages.
+<ul>
+<li>Gametophyte (n) produces gametes by mitosis.</li>
+<li>Sporophyte (2n) produces spores by meiosis.</li>
+<li>Diploid embryo is retained within female gametophyte tissue.</li>
+</ul>
+</li>
+<li><strong>Walled Spores Produced in Sporangia</strong>:
+<ul>
+<li>Sporocytes (2n) in sporangia undergo meiosis to produce haploid spores.</li>
+<li>Spore walls contain <strong>sporopollenin</strong> for environmental resistance.</li>
+</ul>
+</li>
+<li><strong>Gametes Produced in Gametangia</strong>:
+<ul>
+<li><strong>Archegonia</strong>: Female gametangia; produce a single nonmotile egg.</li>
+<li><strong>Antheridia</strong>: Male gametangia; produce and release sperm.</li>
+<li>(Reduced or lost in seed plants)</li>
+</ul>
+</li>
+<li><strong>Apical Meristems</strong>: Regions of perpetual cell division at root and shoot tips; enable lifelong growth and tissue differentiation.</li>
+</ul>
+<h3 id="evidence-for-algal-ancestry"><strong>Evidence for Algal Ancestry</strong></h3>
+<ul>
+<li>Land plants and charophytes share a common ancestor.</li>
+<li>Shared key traits:
+<ul>
+<li>Rose-shaped complexes for cellulose synthesis</li>
+<li>Peroxisome enzymes</li>
+<li>Structure of flagellated sperm</li>
+<li>Formation of a phragmoplast during cell division</li>
+</ul>
+</li>
+</ul>
+<h3 id="major-plant-clades--evolutionary-milestones"><strong>Major Plant Clades &amp; Evolutionary Milestones</strong></h3>
+<ol>
+<li><strong>Nonvascular Plants (Bryophytes)</strong>: Liverworts, hornworts, mosses.
+<ul>
+<li>Gametophyte-dominant life cycle.</li>
+<li>No true vascular tissue.</li>
+</ul>
+</li>
+<li><strong>Vascular Plants (Tracheophytes)</strong>:
+<ul>
+<li>Have <strong>xylem</strong> and <strong>phloem</strong> for support and transport.</li>
+<li>Sporophyte-dominant life cycle.</li>
+<li><strong>Seedless Vascular Plants</strong>: Lycophytes (club mosses) and Pterophytes (ferns).</li>
+<li><strong>Seed Plants</strong>: Gymnosperms and Angiosperms.</li>
+</ul>
+</li>
+<li><strong>Key Adaptations</strong>:
+<ul>
+<li>Vascular tissue (~420 mya)</li>
+<li>Seeds (~360 mya)</li>
+<li>Flowers (in angiosperms)</li>
+</ul>
+</li>
+</ol>
+<h3 id="alternation-of-generations-across-plant-groups"><strong>Alternation of Generations Across Plant Groups</strong></h3>
+<ul>
+<li><strong>Nonvascular Plants</strong>: Dominant gametophyte; small, dependent sporophyte.</li>
+<li><strong>Vascular Plants</strong>: Dominant, independent sporophyte; reduced gametophytes.</li>
+<li><strong>Seed Plants</strong>: Gametophytes are microscopic and dependent on sporophyte; heterosporous (produce separate male and female spores).</li>
+</ul>
+<h3 id="vascular-tissue-xylem-and-phloem"><strong>Vascular Tissue: Xylem and Phloem</strong></h3>
+<ul>
+<li><strong>Xylem</strong>: Conducts water and minerals; contains dead <strong>tracheids</strong> and (in angiosperms) <strong>vessel elements</strong>; strengthened by lignin.</li>
+<li><strong>Phloem</strong>: Conducts sugars and organic compounds; contains living <strong>sieve-tube elements</strong> and <strong>companion cells</strong>.</li>
+<li><strong>Vascular Cambium</strong>: Lateral meristem producing secondary xylem (wood) and phloem.</li>
+</ul>
+<h3 id="sporophylls-and-spore-production"><strong>Sporophylls and Spore Production</strong></h3>
+<ul>
+<li><strong>Sporophylls</strong>: Modified leaves bearing sporangia.
+<ul>
+<li><strong>Sori</strong>: Clusters of sporangia on fern leaves.</li>
+<li><strong>Strobili</strong>: Cone-like structures in lycophytes and gymnosperms.</li>
+</ul>
+</li>
+<li><strong>Homosporous</strong>: Produce one spore type → bisexual gametophyte (e.g., most ferns).</li>
+<li><strong>Heterosporous</strong>: Produce <strong>megaspores</strong> (female) and <strong>microspores</strong> (male) (e.g., all seed plants).</li>
+</ul>
+<h3 id="seed-plants-gymnosperms-and-angiosperms"><strong>Seed Plants: Gymnosperms and Angiosperms</strong></h3>
+<ul>
+<li><strong>Gymnosperms</strong>: &quot;Naked seeds&quot; exposed on cones.
+<ul>
+<li>Phyla: Cycadophyta, Ginkgophyta (one species: <em>Ginkgo biloba</em>), Gnetophyta, Coniferophyta (largest group).</li>
+</ul>
+</li>
+<li><strong>Angiosperms</strong>: Flowering plants; seeds enclosed in ovaries.
+<ul>
+<li><strong>Flower Structure</strong>:
+<ul>
+<li>Sepals (protective)</li>
+<li>Petals (attract pollinators)</li>
+<li>Stamens (male: anther + filament)</li>
+<li>Carpels/Pistils (female: stigma, style, ovary)</li>
+</ul>
+</li>
+<li><strong>Fruit</strong>: Mature ovary; protects and aids seed dispersal.</li>
+<li><strong>Placentation</strong>: Ovule attachment within ovary (basal, parietal, axile, free-central, marginal).</li>
+</ul>
+</li>
+</ul>
+<h3 id="flower-development-abc-model"><strong>Flower Development: ABC Model</strong></h3>
+<ul>
+<li>Three classes of floral organ identity genes:
+<ul>
+<li><strong>A genes</strong> → Sepals</li>
+<li><strong>A + B genes</strong> → Petals</li>
+<li><strong>B + C genes</strong> → Stamens</li>
+<li><strong>C genes</strong> → Carpels</li>
+</ul>
+</li>
+<li><strong>A and C genes are mutually inhibitory</strong>.</li>
+<li>Extended <strong>ABCDE model</strong> includes SEPALLATA (E) and ovule development (D) genes.</li>
+</ul>
+<h3 id="monocots-vs-eudicots"><strong>Monocots vs. Eudicots</strong></h3>
+<ul>
+<li><strong>Monocots</strong>: One cotyledon; parallel leaf veins; vascular bundles complexly arranged; fibrous roots; floral parts in multiples of three.</li>
+<li><strong>Eudicots</strong>: Two cotyledons; netlike leaf veins; vascular bundles in a ring; taproot present; floral parts in multiples of four or five.</li>
+</ul>
+
+            
+            
+        </body>
+        </html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Animal Reproduction</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="animal-reproduction">Animal Reproduction</h1>
+<h2 id="male-reproductive-system">Male Reproductive System</h2>
+<h3 id="anatomy--functions">Anatomy &amp; Functions</h3>
+<ul>
+<li><strong>Testes</strong> (in scrotum): produce sperm (spermatogenesis) and testosterone.</li>
+<li><strong>Epididymis</strong>: sperm maturation and storage.</li>
+<li><strong>Vas deferens</strong>: propels sperm from epididymis to urethra.</li>
+<li><strong>Seminal vesicles</strong>: produce ~60% of semen fluid; contains fructose (energy) and prostaglandins (stimulate uterine contractions).</li>
+<li><strong>Prostate gland</strong>: secretes alkaline fluid with anticoagulant enzymes and citrate; neutralizes vaginal acidity.</li>
+<li><strong>Bulbourethral glands</strong>: secrete clear mucus to lubricate urethra and neutralize residual urine.</li>
+<li><strong>Urethra</strong>: passage for semen and urine.</li>
+<li><strong>Penis</strong>: delivers sperm into female reproductive tract via erection and ejaculation.</li>
+</ul>
+<h3 id="spermatogenesis">Spermatogenesis</h3>
+<ul>
+<li>Occurs in <strong>seminiferous tubules</strong> of testes.</li>
+<li><strong>Spermatogonia</strong> (diploid stem cells) undergo mitosis to maintain population and meiosis to produce sperm.</li>
+<li><strong>Primary spermatocytes</strong> (2n) → Meiosis I → <strong>secondary spermatocytes</strong> (n) → Meiosis II → <strong>spermatids</strong> (n) → <strong>spermiogenesis</strong> → <strong>spermatozoa</strong> (mature sperm).</li>
+<li><strong>Sertoli cells</strong>: nourish developing sperm; form blood‑testis barrier.</li>
+<li><strong>Leydig cells</strong> (interstitial cells): produce testosterone.</li>
+<li><strong>Mature sperm structure</strong>:
+<ul>
+<li><strong>Head</strong>: contains nucleus and acrosome (enzymes to penetrate egg).</li>
+<li><strong>Midpiece</strong>: packed with mitochondria for ATP.</li>
+<li><strong>Tail</strong> (flagellum): propulsion.</li>
+</ul>
+</li>
+</ul>
+<h3 id="hormonal-regulation-in-males">Hormonal Regulation in Males</h3>
+<ul>
+<li><strong>FSH</strong>: stimulates Sertoli cells to support spermatogenesis.</li>
+<li><strong>LH</strong>: stimulates Leydig cells to produce testosterone.</li>
+<li><strong>Testosterone</strong>: promotes sperm maturation, male secondary sex characteristics, muscle/bone growth.</li>
+<li>Negative feedback: testosterone inhibits GnRH, FSH, and LH secretion.</li>
+</ul>
+<h2 id="female-reproductive-system">Female Reproductive System</h2>
+<h3 id="anatomy--functions-1">Anatomy &amp; Functions</h3>
+<ul>
+<li><strong>Ovaries</strong>: produce oocytes (eggs), estrogen, and progesterone.</li>
+<li><strong>Oviducts (fallopian tubes)</strong>: site of fertilization; transport egg to uterus.</li>
+<li><strong>Uterus</strong>: site of embryo implantation and fetal development.</li>
+<li><strong>Endometrium</strong>: inner lining of uterus; thickens during menstrual cycle.</li>
+<li><strong>Cervix</strong>: lower part of uterus; opens into vagina.</li>
+<li><strong>Vagina</strong>: receives sperm; birth canal.</li>
+<li><strong>External genitalia</strong>: labia, clitoris, Bartholin’s glands (lubrication).</li>
+</ul>
+<h3 id="oogenesis">Oogenesis</h3>
+<ul>
+<li>Begins during fetal development; primary oocytes arrested in prophase I until puberty.</li>
+<li>Each menstrual cycle, a few <strong>primary follicles</strong> develop.</li>
+<li><strong>Primary oocyte</strong> (2n) completes Meiosis I → <strong>secondary oocyte</strong> (n) + first polar body (degenerates).</li>
+<li>Secondary oocyte arrested in metaphase II until fertilization.</li>
+<li>After fertilization, Meiosis II completes → <strong>ovum</strong> (n) + second polar body.</li>
+<li><strong>Follicle cells</strong> surround oocyte; secrete estrogen.</li>
+<li><strong>Ovulation</strong>: release of secondary oocyte from mature (Graafian) follicle.</li>
+<li><strong>Corpus luteum</strong>: forms from ruptured follicle; secretes progesterone and estrogen.</li>
+</ul>
+<h3 id="menstrual-cycle-28-days">Menstrual Cycle (~28 days)</h3>
+<ul>
+<li><strong>Ovarian cycle</strong>:
+<ul>
+<li><strong>Follicular phase</strong> (days 1‑14): FSH stimulates follicle growth; rising estrogen.</li>
+<li><strong>Ovulation</strong> (day ~14): LH surge triggers release of secondary oocyte.</li>
+<li><strong>Luteal phase</strong> (days 15‑28): corpus luteum secretes progesterone and estrogen.</li>
+</ul>
+</li>
+<li><strong>Uterine cycle</strong>:
+<ul>
+<li><strong>Menstrual phase</strong> (days 1‑5): shedding of endometrium.</li>
+<li><strong>Proliferative phase</strong> (days 6‑14): estrogen stimulates endometrial thickening.</li>
+<li><strong>Secretory phase</strong> (days 15‑28): progesterone maintains endometrium for possible implantation.</li>
+</ul>
+</li>
+</ul>
+<h3 id="hormonal-regulation-in-females">Hormonal Regulation in Females</h3>
+<ul>
+<li><strong>FSH</strong>: stimulates follicle growth and estrogen secretion.</li>
+<li><strong>LH</strong>: triggers ovulation; stimulates corpus luteum formation.</li>
+<li><strong>Estrogen</strong> (from growing follicles): thickens endometrium; develops female secondary sex characteristics; positive feedback on LH/FSH surge.</li>
+<li><strong>Progesterone</strong> (from corpus luteum): maintains endometrium; inhibits FSH/LH (negative feedback).</li>
+<li><strong>hCG</strong> (human chorionic gonadotropin): secreted by embryo after implantation; maintains corpus luteum during early pregnancy.</li>
+</ul>
+<h2 id="fertilization--early-development">Fertilization &amp; Early Development</h2>
+<h3 id="fertilization-process">Fertilization Process</h3>
+<ol>
+<li><strong>Sperm attraction</strong>: chemotaxis toward egg in oviduct.</li>
+<li><strong>Acrosome reaction</strong>: sperm releases hydrolytic enzymes to penetrate zona pellucida.</li>
+<li><strong>Sperm‑egg fusion</strong>: plasma membranes fuse; sperm nucleus enters egg.</li>
+<li><strong>Cortical reaction</strong>: cortical granules release enzymes that harden zona pellucida (block polyspermy).</li>
+<li><strong>Completion of meiosis II</strong> in secondary oocyte → ovum.</li>
+</ol>
+<h3 id="early-embryonic-development">Early Embryonic Development</h3>
+<ul>
+<li><strong>Cleavage</strong>: rapid mitotic divisions without growth → <strong>morula</strong> (solid ball of cells).</li>
+<li><strong>Blastocyst formation</strong>: fluid‑filled cavity (blastocoel) forms; cells differentiate into:
+<ul>
+<li><strong>Trophoblast</strong>: outer layer; implants into endometrium; forms placenta.</li>
+<li><strong>Inner cell mass</strong>: becomes embryo.
+<ul>
+<li>Inner cell mass → 3 germ layers by gastrulation</li>
+<li>Ectoderm
+<ul>
+<li>Nervous system</li>
+<li>lens</li>
+<li>epidermis of skin</li>
+</ul>
+</li>
+<li>Mesoderm
+<ul>
+<li>bones</li>
+<li>skeletal muscle</li>
+<li>dermis of skin</li>
+<li>kidney</li>
+<li>gonads</li>
+<li>heart &amp; blood vessels</li>
+</ul>
+</li>
+<li>Endoderm
+<ul>
+<li>Respiratory tract</li>
+<li>Digestive tract</li>
+<li>Liver, pancreas</li>
+<li>Urinary bladder &amp; urethra</li>
+<li>Thyroid gland, parathyroid gland, thymus</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Implantation</strong>: blastocyst embeds in endometrium (~7 days after fertilization).</li>
+</ul>
+<h3 id="placenta--pregnancy">Placenta &amp; Pregnancy</h3>
+<ul>
+<li><strong>Placenta</strong>: formed from trophoblast and maternal tissue; site of nutrient/gas/waste exchange.</li>
+<li>Secretes <strong>hCG</strong> (maintains corpus luteum), <strong>estrogen</strong>, and <strong>progesterone</strong>.</li>
+<li><strong>Amniotic sac &amp; fluid</strong>: cushion and protect fetus.</li>
+<li><strong>Umbilical cord</strong>: connects fetus to placenta (two arteries, one vein).</li>
+</ul>
+<h3 id="birth-parturition">Birth (Parturition)</h3>
+<ol>
+<li><strong>Progesterone drop</strong> allows uterine contractions.</li>
+<li><strong>Prostaglandins</strong> and <strong>oxytocin</strong> stimulate contractions (positive feedback).</li>
+<li><strong>Cervical dilation</strong> → expulsion of baby → delivery of placenta.</li>
+</ol>
+<h2 id="sex-hormones-overview">Sex Hormones Overview</h2>
+<ul>
+<li><strong>Androgens</strong> (e.g., testosterone): male development, spermatogenesis.</li>
+<li><strong>Estrogens</strong> (e.g., estradiol): female development, endometrial growth.</li>
+<li><strong>Progestins</strong> (e.g., progesterone): maintain endometrium, pregnancy.</li>
+<li>All are steroid hormones derived from cholesterol.</li>
+</ul>
+<h2 id="common-sexually-transmitted-diseases-stds">Common Sexually Transmitted Diseases (STDs)</h2>
+<ul>
+<li><strong>Syphilis</strong> (<em>Treponema pallidum</em> bacterium): painless sore → rash → CNS damage if untreated; treated with antibiotics.</li>
+<li><strong>Gonorrhea</strong> (<em>Neisseria gonorrhoeae</em> bacterium): can cause urethritis, pelvic inflammatory disease; treated with antibiotics.</li>
+<li><strong>Trichomoniasis</strong> (<em>Trichomonas vaginalis</em> protozoan): vaginitis/urethritis; treated with antibiotics.</li>
+<li><strong>HPV</strong> (human papillomavirus): causes genital warts and cancers (cervical, anal, etc.); preventable by vaccine.</li>
+</ul>
+<p>Practice Questions</p>
+
+            
+            
+        </body>
+        </html>
