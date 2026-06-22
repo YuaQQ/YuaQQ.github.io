@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Population Ecology</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="population-ecology">Population Ecology</h1>
+<h1 id="populations">Populations</h1>
+<h2 id="definition">Definition</h2>
+<ul>
+<li><strong>Population</strong>: Group of individuals of a single species living in the same general area.</li>
+</ul>
+<h2 id="determining-population-size-mark-recapture-method">Determining Population Size: Mark-Recapture Method</h2>
+<ul>
+<li>
+<p>Used to estimate wildlife population size.</p>
+</li>
+<li>
+<p><strong>Procedure</strong>:</p>
+<ol>
+<li>Capture a random sample, mark/tag each individual, release.</li>
+<li>Later, recapture a second sample, count marked individuals.</li>
+</ol>
+</li>
+<li>
+<p><strong>Assumption</strong>: Proportion of marked individuals in recapture equals proportion in entire population.</p>
+</li>
+<li>
+<p><strong>Formula</strong>:</p>
+<p>!1768210058052.png</p>
+<ul>
+<li>N = total population size.</li>
+<li>s = number marked in first capture.</li>
+<li>n = total number in second capture.</li>
+<li>x = number marked in second capture.</li>
+</ul>
+</li>
+</ul>
+<h2 id="population-characteristics">Population Characteristics</h2>
+<ul>
+<li><strong>Density</strong>: Number of individuals per unit area/volume.</li>
+<li><strong>Dispersion</strong>: Pattern of spacing among individuals.
+<ul>
+<li><strong>Clumped</strong>: Individuals aggregate in patches (influenced by resources/behavior).</li>
+<li><strong>Uniform</strong>: Individuals evenly distributed (influenced by social interactions like territoriality).</li>
+<li><strong>Random</strong>: Positions independent (occurs without strong attractions/repulsions).</li>
+</ul>
+</li>
+</ul>
+<h2 id="population-size-change">Population Size Change</h2>
+<ul>
+<li><strong>Factors</strong>:
+<ul>
+<li><strong>Increase</strong>: Natality (births), Immigration.</li>
+<li><strong>Decrease</strong>: Mortality (deaths), Emigration.</li>
+</ul>
+</li>
+<li><strong>Equation</strong></li>
+</ul>
+<p>!1768210104783.png</p>
+<h2 id="population-growth-models">Population Growth Models</h2>
+<ul>
+<li>
+<p><strong>Basic Change</strong>:</p>
+<p>!1768210143943.png</p>
+<ul>
+<li>N_{t+1}: population at time t+1.</li>
+<li>N_t: population at time t.</li>
+<li>B: births between t and t+1.</li>
+<li>D: deaths between t and t+1.</li>
+</ul>
+</li>
+<li>
+<p><strong>Per Capita Rates</strong>:</p>
+<ul>
+<li><strong>Per capita birth rate (b)</strong>: Average offspring per individual.</li>
+<li><strong>Per capita death rate (d)</strong>: Average chance of dying.</li>
+<li><strong>Per capita growth rate (r = b - d)</strong>: Individual’s contribution to population growth.</li>
+<li>If r &gt; 0 (b &gt; d): population grows.</li>
+<li>If r &lt; 0 (b &lt; d): population shrinks.</li>
+<li>If r = 0 (b = d): population stable.</li>
+</ul>
+</li>
+<li>
+<p><strong>Exponential Growth</strong>:</p>
+<ul>
+<li><strong>Equation</strong>:</li>
+</ul>
+<p>!image.png</p>
+<ul>
+<li><strong>Pattern</strong>: J-shaped curve; occurs in ideal, unlimited environments or during rebound.</li>
+<li><strong>Example</strong>: Elephant population growth in Kruger National Park.</li>
+</ul>
+</li>
+<li>
+<p><strong>Logistic Growth</strong>:</p>
+<ul>
+<li><strong>Carrying Capacity (K)</strong>: Maximum population size environment can sustain.</li>
+<li><strong>Equation</strong>:</li>
+</ul>
+<p>!1768210338811.png</p>
+<ul>
+<li><strong>Pattern</strong>: S-shaped curve; growth slows as N approaches K.</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>When N small relative to K: (K-N)/K ≈ 1 → growth near exponential.</li>
+<li>When N large: (K-N)/K ≈ 0 → growth slows/stops.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="demography--life-history">Demography &amp; Life History</h2>
+<ul>
+<li><strong>Demography</strong>: Study of processes affecting birth, death, and growth rates.</li>
+<li><strong>Life History</strong>: Shows age-based transitions, survivorship, fecundity.</li>
+<li><strong>Reproductive Strategies</strong>:
+<ul>
+<li><strong>Semelparity (Big-Bang)</strong>: Reproduce once then die (favored in variable/unpredictable environments).
+<ul>
+<li><em>Example</em>: Salmon spawning.</li>
+</ul>
+</li>
+<li><strong>Iteroparity (Repeated)</strong>: Reproduce multiple times (favored in dependable environments).
+<ul>
+<li><em>Example</em>: Loggerhead turtles.</li>
+</ul>
+</li>
+<li><strong>Parthenogenesis</strong>: Asexual reproduction; females produce offspring from unfertilized eggs.
+<ul>
+<li><em>Examples</em>: Rotifers, aphids, some bees, some lizards/fishes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="survivorship-curves">Survivorship Curves</h2>
+<ul>
+<li>Plot of proportion/number surviving at each age.</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Type I</strong>: Low death rate early/mid-life; increases in old age (e.g., humans).</li>
+<li><strong>Type II</strong>: Constant death rate across lifespan (e.g., some birds).</li>
+<li><strong>Type III</strong>: High death rate early; lower for survivors (e.g., many plants, marine invertebrates).</li>
+</ul>
+</li>
+</ul>
+<h2 id="resource-allocation--life-history-trade-offs">Resource Allocation &amp; Life History Trade-offs</h2>
+<ul>
+<li><strong>Principle of Allocation</strong>: Acquired resource units used for one function at a time (maintenance, growth, defense, reproduction).</li>
+<li><strong>Trade-offs</strong>: Negative relationships among growth, reproduction, survival.
+<ul>
+<li><em>Example</em>: High early reproduction → slower growth/smaller adult size.</li>
+<li><em>Example</em>: High investment in reproduction → reduced adult survivorship.</li>
+</ul>
+</li>
+</ul>
+<h2 id="k-selection-vs-r-selection">K-selection vs. r-selection</h2>
+<ul>
+<li><strong>K-selected (Equilibrium Species)</strong>:
+<ul>
+<li>Population limited by carrying capacity (K).</li>
+<li>Density-dependent.</li>
+<li>Traits: Larger, long-lived, fewer offspring, high parental care.</li>
+<li><em>Examples</em>: Elephants, whales.</li>
+</ul>
+</li>
+<li><strong>r-selected (Opportunist Species)</strong>:
+<ul>
+<li>Population limited by reproductive rate (r).</li>
+<li>Density-independent.</li>
+<li>Traits: Smaller, short-lived, many offspring, low/no parental care.</li>
+<li><em>Examples</em>: Weeds, insects.</li>
+</ul>
+</li>
+</ul>
+<h2 id="limiting-factors">Limiting Factors</h2>
+<ul>
+<li><strong>Density-Independent Factors</strong>: Unrelated to population density.
+<ul>
+<li><em>Examples</em>: Earthquakes, storms, fires, floods.</li>
+</ul>
+</li>
+<li><strong>Density-Dependent Factors</strong>: Increase with population density.
+<ul>
+<li><em>Examples</em>: Competition for food, waste buildup, predation, disease.</li>
+<li><em>Example</em>: Yeast in beer fermentation limited by ethanol tolerance (~13%).</li>
+</ul>
+</li>
+</ul>
+<h2 id="population-cycles">Population Cycles</h2>
+<ul>
+<li>Regular boom-bust cycles due to predation/other interactions.</li>
+<li><em>Example</em>: Snowshoe hare &amp; lynx ~10-year cycle.</li>
+</ul>
+<h2 id="human-population">Human Population</h2>
+<ul>
+<li><strong>Growth</strong>: Accelerated due to technological advances (agriculture, medicine).</li>
+<li><strong>Age Structure</strong>: Relative number of individuals in each age group influences growth.
+<ul>
+<li><strong>Rapid Growth</strong>: Pyramid shape (e.g., Afghanistan).</li>
+<li><strong>No Growth</strong>: More uniform shape (e.g., Italy).</li>
+</ul>
+</li>
+<li><strong>Carrying Capacity Concerns</strong>:
+<ul>
+<li>Reliance on finite fossil fuels.</li>
+<li>Climate change &amp; ecosystem degradation from population expansion.</li>
+</ul>
+</li>
+<li><strong>Future</strong>: Voluntary reduction via lower per capita birth rates needed if carrying capacity exceeded.</li>
+</ul>
+<p>Practice Questions</p>
+
+            
+            
+        </body>
+        </html>
