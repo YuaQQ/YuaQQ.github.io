@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Genetics &amp; Evolution</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="genetics--evolution">Genetics &amp; Evolution</h1>
+<h1 id="genetics---non-mendelian-inheritance">Genetics - Non-Mendelian Inheritance</h1>
+<h2 id="core-concepts">Core Concepts</h2>
+<ul>
+<li><strong>Characters</strong>: Observable physical features (e.g., flower color, seed shape).</li>
+<li><strong>Traits</strong>: Specific forms of a character (e.g., purple flowers, wrinkled seeds).</li>
+<li><strong>Inherited Traits</strong>: Traits passed from parents to offspring.</li>
+<li><strong>Heredity</strong>: The transmission of traits from parents to offspring.</li>
+<li><strong>Genetics</strong>: The study of heredity.</li>
+<li><strong>Gene</strong>: A segment of DNA that controls a character.</li>
+<li><strong>Allele</strong>: Different versions of the same gene controlling a trait.</li>
+<li><strong>Dominant Allele</strong>: An allele that expresses its trait when paired with a different allele.</li>
+<li><strong>Recessive Allele</strong>: An allele whose trait is masked when paired with a different allele.</li>
+<li><strong>Locus (Loci)</strong>: The specific location of a gene on a chromosome.</li>
+<li><strong>Homologous Chromosomes</strong>: Paired chromosomes, one from each parent, carrying the same genes at the same loci.</li>
+<li><strong>Genotype</strong>: The genetic makeup of an organism (e.g., allele combinations).</li>
+<li><strong>Phenotype</strong>: The observable physical appearance of an organism.</li>
+<li><strong>Homozygous</strong>: Having two identical alleles for a gene.</li>
+<li><strong>Heterozygous</strong>: Having two different alleles for a gene.</li>
+</ul>
+<h2 id="mendelian-genetics">Mendelian Genetics</h2>
+<h3 id="law-of-segregation-mendels-first-law">Law of Segregation (Mendel's First Law)</h3>
+<ul>
+<li>During gamete formation (meiosis), alleles for each trait separate so that each gamete carries only one allele for each gene.</li>
+<li>This occurs because homologous chromosomes separate during meiosis.</li>
+<li>Illustrated by monohybrid crosses (e.g., purple vs. white flowers in peas).</li>
+</ul>
+<h3 id="law-of-independent-assortment-mendels-second-law">Law of Independent Assortment (Mendel's Second Law)</h3>
+<ul>
+<li>Genes for different traits assort independently during gamete formation.</li>
+<li>This holds true for genes on different chromosomes or far apart on the same chromosome.</li>
+<li>Illustrated by dihybrid crosses (e.g., seed shape and color in peas yielding a 9:3:3:1 ratio).</li>
+</ul>
+<h2 id="non-mendelian-inheritance">Non-Mendelian Inheritance</h2>
+<h3 id="polygenic-inheritance">Polygenic Inheritance</h3>
+<ul>
+<li>A single character is influenced by multiple genes (multiple loci).</li>
+<li>Traits are usually quantitative (measured, not just observed).</li>
+<li>Examples: human skin color, height, grain yield.</li>
+<li>Trait distribution often follows a normal (bell) curve.</li>
+<li>Phenotype results from the additive effect of alleles at multiple loci.</li>
+<li>Formula: Probability follows binomial distribution: <code>P(x) = (n choose x) * p^x * (1-p)^(n-x)</code>.</li>
+</ul>
+<h3 id="pleiotropy">Pleiotropy</h3>
+<ul>
+<li>A single gene affects multiple phenotypic traits.</li>
+<li>Examples: Marfan syndrome (affects height, fingers, eyes, heart), Porphyria variegata (affects abdomen, muscles, vision).</li>
+</ul>
+<h3 id="lethality-special-case-of-pleiotropy">Lethality (Special Case of Pleiotropy)</h3>
+<ul>
+<li><strong>Recessive-Lethal Allele</strong>: Causes death in homozygous recessive individuals (e.g., some dwarfism in mice).</li>
+<li><strong>Dominant-Lethal Allele</strong>: Causes death even in heterozygotes (e.g., Huntington's disease).</li>
+</ul>
+<h3 id="epistasis">Epistasis</h3>
+<ul>
+<li>One gene affects the expression of another gene at a different locus.</li>
+<li>The epistatic gene masks or alters the effect of the other gene.</li>
+<li>Examples:
+<ul>
+<li><em>Drosophila</em> eye color: <code>white</code> gene mutation is epistatic to <code>cinnabar</code>.</li>
+<li>Sweet pea flower color: Two genes interact (9 purple : 7 white ratio in F2).</li>
+<li>Summer squash color: Gene interaction leads to 12:3:1 or 9:6:1 ratios.</li>
+<li>Mouse coat color: 9:3:4 ratio.</li>
+</ul>
+</li>
+<li>Common modified phenotypic ratios: 9:7, 9:3:4, 12:3:1, 9:6:1, 15:1, 13:3.</li>
+</ul>
+<h3 id="linkage-analysis">Linkage Analysis</h3>
+<ul>
+<li>Genes located close together on the same chromosome tend to be inherited together.</li>
+<li><strong>Recombination Frequency (RF)</strong>: Percentage of recombinant offspring in a cross. <code>RF = (Number of Recombinants / Total Progeny) * 100</code>.</li>
+<li><strong>Genetic Map Distance</strong>: Measured in map units (centiMorgans, cM). 1 cM = 1% recombination frequency.</li>
+<li><strong>Linkage Group</strong>: A group of genes on the same chromosome that are linked (RF &lt; 50%).</li>
+<li>Crossing over during meiosis can separate linked genes, producing recombinant phenotypes.</li>
+<li>Double or multiple crossovers can lead to underestimation of genetic distances.</li>
+</ul>
+<h3 id="tetrad-analysis-in-fungi-like-yeast-and-neurospora">Tetrad Analysis (in Fungi like Yeast and Neurospora)</h3>
+<ul>
+<li>Allows direct observation of all four products of a single meiosis.</li>
+<li><strong>Parental Ditype (PD)</strong>: All spores have parental allele combinations.</li>
+<li><strong>Nonparental Ditype (NPD)</strong>: All spores have recombinant allele combinations.</li>
+<li><strong>Tetratype (T)</strong>: Contains both parental and recombinant spores.</li>
+<li><strong>For Unlinked Genes</strong>: PD ≈ NPD.</li>
+<li><strong>For Linked Genes</strong>: PD &gt;&gt; NPD.</li>
+<li><strong>Recombination Frequency (from tetrads)</strong>: <code>RF = [NPD + (1/2)T] / Total Tetrads * 100</code>.</li>
+<li><strong>Ordered Tetrads</strong> (e.g., Neurospora): Allow mapping of genes relative to the centromere based on segregation patterns (MI vs. MII).</li>
+</ul>
+<h3 id="genomic-imprinting">Genomic Imprinting</h3>
+<ul>
+<li>Epigenetic process where genes are selectively silenced based on parental origin.</li>
+<li>Example: Mouse Igf2 gene. Only the paternal allele is expressed. Offspring phenotype depends on which parent contributed the functional allele.</li>
+<li>Human Examples:
+<ul>
+<li><strong>Prader-Willi Syndrome (PWS)</strong>: Caused by deletion or silencing of paternal genes on chromosome 15q11-q13.</li>
+<li><strong>Angelman Syndrome (AS)</strong>: Caused by deletion or silencing of maternal genes on the same region.</li>
+</ul>
+</li>
+</ul>
+<h3 id="organellar-cytoplasmic-inheritance">Organellar (Cytoplasmic) Inheritance</h3>
+<ul>
+<li>Inheritance of genes located in mitochondrial (mtDNA) or chloroplast (cpDNA) genomes.</li>
+<li><strong>Maternal Inheritance</strong>: Most common in animals and plants; organelles inherited only from the mother.</li>
+<li><strong>Biparental Inheritance</strong>: Occurs in some species like budding yeast.</li>
+<li><strong>Heteroplasmy</strong>: Cell contains organelles with different genotypes.</li>
+<li><strong>Homoplasmy</strong>: Cell contains organelles with only one genotype.</li>
+<li>Examples: Leaf color in Mirabilis jalapa (chloroplast inheritance), human mitochondrial diseases.</li>
+</ul>
+<h3 id="maternal-effect">Maternal Effect</h3>
+<ul>
+<li>The phenotype of the offspring is determined by the genotype of the mother, not its own genotype.</li>
+<li>Maternal gene products (mRNA, proteins) deposited in the egg influence early development.</li>
+<li>Examples:
+<ul>
+<li>Dorsal-ventral axis formation in <em>Drosophila</em> (dorsal gene).</li>
+<li>Anterior-posterior axis formation in <em>Drosophila</em> (bicoid, nanos, hunchback, caudal genes).</li>
+<li>Shell coiling direction in snails (<em>Lymnaea peregra</em>).</li>
+</ul>
+</li>
+</ul>
+<h2 id="sex-chromosomes--inactivation">Sex Chromosomes &amp; Inactivation</h2>
+<ul>
+<li>Humans: XX = female, XY = male. The Y chromosome determines maleness.</li>
+<li><strong>X-Inactivation (Lyon Hypothesis)</strong>: In female somatic cells, one X chromosome is randomly inactivated early in development, forming a Barr body.</li>
+<li><strong>Mechanism</strong>: Controlled by the X-inactivation center (Xic) and the Xist gene (produces a long non-coding RNA that coats and silences the X chromosome).</li>
+<li>Results in mosaicism for X-linked traits in females (e.g., tortoiseshell cats).</li>
+</ul>
+<h2 id="chromosomal-aberrations">Chromosomal Aberrations</h2>
+<ul>
+<li><strong>Deletion</strong>: Loss of a chromosome segment (e.g., cri du chat syndrome, terminal deletion on chr5).</li>
+<li><strong>Duplication</strong>: Presence of an extra copy of a segment (e.g., gene families like globin genes).</li>
+<li><strong>Inversion</strong>: A segment is reversed. Paracentric (no centromere involved) or Pericentric (centromere included).</li>
+<li><strong>Translocation</strong>: Movement of a segment to a non-homologous chromosome.
+<ul>
+<li><strong>Reciprocal Translocation</strong>: Exchange of segments.</li>
+<li><strong>Robertsonian Translocation</strong>: Fusion of long arms of two acrocentric chromosomes (e.g., origin of human chr 2).</li>
+</ul>
+</li>
+</ul>
+<h2 id="population-genetics">Population Genetics</h2>
+<ul>
+<li><strong>Population</strong>: Smallest unit of evolution; a group of interbreeding individuals.</li>
+<li><strong>Gene Pool</strong>: All alleles present in a population.</li>
+<li><strong>Allele Frequency</strong>: Proportion of a specific allele in the gene pool.</li>
+<li><strong>Hardy-Weinberg Equilibrium</strong>: A theoretical state where allele and genotype frequencies remain constant from generation to generation.
+<ul>
+<li>Conditions: No mutation, no gene flow, infinite population size, random mating, no natural selection.</li>
+<li>Equations: For two alleles (p, q): <code>p + q = 1</code> and <code>p² + 2pq + q² = 1</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="evolutionary-forces">Evolutionary Forces</h3>
+<ul>
+<li><strong>Natural Selection</strong>: Differential survival and reproduction based on trait differences.</li>
+<li><strong>Genetic Drift</strong>: Random changes in allele frequencies, especially in small populations.</li>
+<li><strong>Gene Flow</strong>: Movement of alleles between populations via migration.</li>
+<li><strong>Mutation</strong>: Ultimate source of new genetic variation.</li>
+</ul>
+<h3 id="modes-of-natural-selection">Modes of Natural Selection</h3>
+<ul>
+<li><strong>Stabilizing Selection</strong>: Favors intermediate phenotypes (reduces variation).</li>
+<li><strong>Directional Selection</strong>: Favors one extreme phenotype.</li>
+<li><strong>Disruptive Selection</strong>: Favors both extreme phenotypes over intermediates.</li>
+<li><strong>Sexual Selection</strong>: Selection for mating success (intrasexual competition or intersexual choice).</li>
+<li><strong>Balancing Selection</strong>: Maintains genetic variation.
+<ul>
+<li><strong>Heterozygote Advantage</strong>: Heterozygotes have higher fitness (e.g., sickle cell trait in malaria zones).</li>
+<li><strong>Frequency-Dependent Selection</strong>: Fitness depends on a phenotype's frequency.
+<ul>
+<li><strong>Negative</strong>: Rare phenotypes have an advantage.</li>
+<li><strong>Positive</strong>: Common phenotypes have an advantage (e.g., Batesian mimicry).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="important-genetic-disorders">Important Genetic Disorders</h2>
+<ul>
+<li><strong>Autosomal Dominant</strong>: Huntington's disease, Achondroplasia.</li>
+<li><strong>Autosomal Recessive</strong>: Tay-Sachs disease.</li>
+<li><strong>X-linked Dominant</strong>: Fragile X syndrome.</li>
+<li><strong>X-linked Recessive</strong>: Duchenne Muscular Dystrophy (DMD).</li>
+</ul>
+<h2 id="key-example-questions-usabo">Key Example Questions (USABO)</h2>
+<ul>
+<li>Polygenic inheritance &amp; number of genes (Harry's plant height).</li>
+<li>Epistasis (Periwinkle flower color, Sky bison whistle response).</li>
+<li>Linkage &amp; Recombination Frequency (Octopus traits, Gene order mapping).</li>
+<li>Genomic Imprinting (Prader-Willi/Angelman diagnosis).</li>
+<li>Organellar Inheritance (Pedigree analysis for mitochondrial disease).</li>
+<li>Maternal Effect (Snail shell coiling).</li>
+<li>X-inactivation (Carrier of X-chromosome duplication).</li>
+<li>Chromosomal Aberrations (Diagnosis via FISH).</li>
+<li>Population Genetics &amp; Selection (Hardy-Weinberg, fitness calculations, selection types).</li>
+</ul>
+<p>Practice Questions (Genetics)</p>
+<p>Practice Questions (Evolution)</p>
+
+            
+            
+        </body>
+        </html>

@@ -446,6 +446,37 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			<script src="https://YuaQQ.github.io/assets/js/util.js"></script>
 			<script src="https://YuaQQ.github.io/assets/js/main.js"></script>
 			<script>
+			(function() {
+				// 配置参数
+				const MIN_FONT_SIZE = 0.5;      // 最小字体 (rem)
+				const DEFAULT_FONT_SIZE = 0.8;  // 默认字体 (rem)
+				const MAX_CHARS_BEFORE_SCALE = 12; // 超过此字数开始缩放
+				
+				// 获取所有导航链接
+				const navLinks = document.querySelectorAll('#nav ul.links li a');
+				
+				navLinks.forEach(link => {
+					const text = link.innerText || link.textContent;
+					const charCount = text.length;
+					
+					if (charCount > MAX_CHARS_BEFORE_SCALE) {
+						// 计算缩放比例：字数越多，字体越小
+						// 公式：新字体 = 默认字体 * (阈值字数 / 实际字数)
+						let ratio = MAX_CHARS_BEFORE_SCALE / charCount;
+						// 限制最小字体
+						let newFontSize = Math.max(MIN_FONT_SIZE, DEFAULT_FONT_SIZE * ratio);
+						link.style.fontSize = newFontSize + 'rem';
+						
+						// 可选：同时微调内边距
+						let newPadding = Math.max(0.8, 2 * ratio);
+						link.style.paddingLeft = newPadding + 'rem';
+						link.style.paddingRight = newPadding + 'rem';
+					}
+					// 字数未超过阈值，保持默认样式
+				});
+			})();
+			</script>
+			<script>
 			    <!-- 自定义下拉菜单（绕过 CSS 裁剪问题） -->
 				(function() {
 					// 等待页面加载完成

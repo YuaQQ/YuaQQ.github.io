@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Animal Behaviors</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="animal-behaviors">Animal Behaviors</h1>
+<h1 id="animal-behavior">Animal Behavior</h1>
+<h2 id="definition--purpose">Definition &amp; Purpose</h2>
+<ul>
+<li><strong>Behavior</strong>: Action/response carried out by muscular/hormonal systems under nervous system control, often in response to stimuli.</li>
+<li><strong>Ethology</strong>: Scientific study of animal behavior.</li>
+<li><strong>Behavior helps an animal</strong>:
+<ul>
+<li>Forage (obtain food).</li>
+<li>Mate (find partner for sexual reproduction).</li>
+<li>Maintain homeostasis.</li>
+</ul>
+</li>
+</ul>
+<h2 id="innate-vs-learned-behavior">Innate vs. Learned Behavior</h2>
+<h3 id="innate-behavior">Innate Behavior</h3>
+<ul>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Automatically developed, fixed, &quot;built-in&quot;; no learning curve.</li>
+<li>Independent from environment (all individuals exhibit it).</li>
+<li>Controlled by genes → subject to natural selection.</li>
+</ul>
+</li>
+<li><strong>Examples</strong>: Early survival, reproduction, kinesis, taxis, migration, fixed action patterns.</li>
+</ul>
+<h3 id="learned-behavior">Learned Behavior</h3>
+<ul>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Modified by experience.</li>
+<li>Variable, changeable.</li>
+</ul>
+</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Individual Learning</strong>: Modified by personal experience; not transmitted to next generation.</li>
+<li><strong>Cultural Transmission (Social Learning)</strong>: Copied from others; transmissible across generations.</li>
+</ul>
+</li>
+</ul>
+<h2 id="specific-innate-behaviors">Specific Innate Behaviors</h2>
+<h3 id="kinesis-vs-taxis">Kinesis vs. Taxis</h3>
+<ul>
+<li><strong>Taxis</strong>: Directional movement toward (positive) or away from (negative) a stimulus.
+<ul>
+<li><strong>Phototaxis</strong>: Movement in response to light.</li>
+<li><strong>Chemotaxis</strong>: Movement in response to chemicals.</li>
+</ul>
+</li>
+<li><strong>Kinesis</strong>: Non-directional change in rate of movement or activity in response to a stimulus.</li>
+</ul>
+<h3 id="fixed-action-patterns-faps">Fixed Action Patterns (FAPs)</h3>
+<ul>
+<li>Sequence of unlearned, innate behaviors; unchangeable once initiated.</li>
+<li>Triggered by a simple external cue (<strong>sign stimulus</strong>).</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Male stickleback fish attacks anything with a red underside (sign stimulus).</li>
+<li>Begging behavior in birds, web spinning by spiders.</li>
+</ul>
+</li>
+</ul>
+<h2 id="learning--cognition">Learning &amp; Cognition</h2>
+<h3 id="habituation">Habituation</h3>
+<ul>
+<li>Simple learning involving loss of responsiveness to irrelevant stimuli.</li>
+<li><strong>Example</strong>: Birds stop responding to alarm calls if no actual attack follows.</li>
+</ul>
+<h3 id="imprinting">Imprinting</h3>
+<ul>
+<li>Combines learning + innate components; generally irreversible.</li>
+<li>Occurs during a <strong>sensitive period</strong> (time when development occurs most easily).</li>
+<li><strong>Critical Period</strong>: Time when certain events must occur for normal development.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li>Young geese following their mother (or a moving object).</li>
+<li>Conservation programs using human &quot;parents&quot; to lead whooping crane migrations.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spatial-learning">Spatial Learning</h3>
+<ul>
+<li>Modification of behavior based on experience with spatial environment.</li>
+<li><strong>Navigation</strong>: Moving toward a destination.</li>
+<li><strong>Orientation</strong>: Adopting position/path relative to environmental cue.</li>
+<li><strong>Mechanisms</strong>:
+<ul>
+<li><strong>Trail Following</strong>: Ants use pheromone trails.</li>
+<li><strong>Sun Compass</strong>: Homing pigeons use sun position + circadian clock.</li>
+<li><strong>Magnetic Field Detection</strong>: Homing pigeons, loggerhead sea turtles.</li>
+<li><strong>Landmark Use</strong>: Hills, visual cues.</li>
+</ul>
+</li>
+<li><strong>Example</strong>: Honey bee <strong>waggle dance</strong> communicates food location (distance/direction relative to sun).</li>
+</ul>
+<h3 id="associative-learning">Associative Learning</h3>
+<ul>
+<li>Learning to associate a stimulus with a consequence.</li>
+<li><strong>Operant Conditioning (Trial-and-Error)</strong>:
+<ul>
+<li>Associate behavior with reward/punishment.</li>
+<li><strong>Example</strong>: Rat learns to press lever for food.</li>
+</ul>
+</li>
+<li><strong>Classical Conditioning (Pavlovian)</strong>:
+<ul>
+<li>Associate neutral stimulus with significant stimulus.</li>
+<li><strong>Example</strong>: Pavlov's dogs salivate to bell after pairing with food.</li>
+</ul>
+</li>
+</ul>
+<h3 id="cognition--problem-solving">Cognition &amp; Problem Solving</h3>
+<ul>
+<li><strong>Cognition</strong>: Process involving awareness, reasoning, recollection, judgment.
+<ul>
+<li><strong>Example</strong>: Honeybees distinguish &quot;same&quot; vs. &quot;different.&quot;</li>
+</ul>
+</li>
+<li><strong>Problem Solving</strong>: Devising strategy to overcome obstacle.
+<ul>
+<li><strong>Examples</strong>: Chimpanzees stack boxes to reach food; ravens pull up string to get suspended food.</li>
+</ul>
+</li>
+</ul>
+<h3 id="social-learning">Social Learning</h3>
+<ul>
+<li>Learning through observation of others; forms roots of culture.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li>Young chimps learn to crack nuts by watching elders.</li>
+<li>Vervet monkeys use distinct alarm calls for different predators.</li>
+</ul>
+</li>
+</ul>
+<h2 id="social-behavior--altruism">Social Behavior &amp; Altruism</h2>
+<h3 id="benefits--costs-of-group-living">Benefits &amp; Costs of Group Living</h3>
+<ul>
+<li><strong>Benefits</strong>: Protection from predators (e.g., flocking birds spot predators earlier).</li>
+<li><strong>Costs</strong>: Increased visibility, disease spread, resource depletion.</li>
+</ul>
+<h3 id="altruism--inclusive-fitness">Altruism &amp; Inclusive Fitness</h3>
+<ul>
+<li><strong>Altruism</strong>: Behavior reducing individual fitness but increasing fitness of others.</li>
+<li><strong>Inclusive Fitness</strong>: Total effect on proliferating genes via own offspring + helping relatives produce offspring.</li>
+<li><strong>Selfish Gene Theory</strong>: Alleles promoting their own propagation are favored.</li>
+</ul>
+<h3 id="hamiltons-rule--kin-selection">Hamilton's Rule &amp; Kin Selection</h3>
+<ul>
+<li><strong>Hamilton's Rule</strong>: Natural selection favors altruism when rB &gt; C.
+<ul>
+<li>r = coefficient of relatedness (fraction of shared genes).</li>
+<li>B = benefit to recipient.</li>
+<li>C = cost to altruist.</li>
+</ul>
+</li>
+<li><strong>Kin Selection</strong>: Natural selection favoring altruism toward relatives.
+<ul>
+<li><strong>Example</strong>: Belding's ground squirrels give alarm calls to warn relatives.</li>
+<li><strong>Example</strong>: Naked mole rats help reproductive queen/king (close relatives).</li>
+</ul>
+</li>
+</ul>
+<h3 id="reciprocal-altruism">Reciprocal Altruism</h3>
+<ul>
+<li>Altruism toward unrelated individuals if favor is returned later.</li>
+<li>Requires stable social groups, repeated interactions, punishment of cheaters.</li>
+<li><strong>Example</strong>: Human altruism; Prisoner's Dilemma scenarios.</li>
+</ul>
+<h2 id="mating-behavior">Mating Behavior</h2>
+<ul>
+<li><strong>Mating Systems</strong>:
+<ul>
+<li><strong>Promiscuous</strong>: No strong pair bonds.</li>
+<li><strong>Monogamous</strong>: One male + one female.</li>
+<li><strong>Polygamous</strong>:
+<ul>
+<li><strong>Polygyny</strong>: One male + many females.</li>
+<li><strong>Polyandry</strong>: One female + many males.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Sexual Dimorphism</strong>: Physical differences between males/females.</li>
+<li><strong>Mate Choice Copying</strong>: Individuals copy mate choices of others.</li>
+<li><strong>Intrasexual Selection</strong>: Male-male competition (e.g., <strong>agonistic behavior</strong>—ritualized contests for mates/resources).</li>
+</ul>
+<h2 id="foraging-behavior--optimal-foraging-theory">Foraging Behavior &amp; Optimal Foraging Theory</h2>
+<h3 id="evolution-of-foraging-behavior">Evolution of Foraging Behavior</h3>
+<ul>
+<li><strong>Example</strong>: Drosophila larvae foraging behavior influenced by gene alleles; natural selection favors different alleles based on population density.</li>
+</ul>
+<h3 id="optimal-foraging-model">Optimal Foraging Model</h3>
+<ul>
+<li>Views foraging as compromise between nutritional benefits and costs (energy, predation risk).</li>
+<li><strong>Profitability of Prey</strong>: Energy gained per handling time e/h.</li>
+<li><strong>General Model</strong>: Maximizes energy gain per total time E/T, accounting for search time Ts and encounter rate λ.</li>
+</ul>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>E</mi><mi>T</mi></mfrac><mo>=</mo><mfrac><mrow><msub><mi>T</mi><mi>s</mi></msub><mi>λ</mi><mi>e</mi></mrow><mrow><msub><mi>T</mi><mi>s</mi></msub><mo>+</mo><msub><mi>T</mi><mi>s</mi></msub><mi>λ</mi><mi>h</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{E}{T}=\frac{T_s \lambda e}{T_s+T_s \lambda h}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2074em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">λh</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">λ</span><span class="mord mathnormal">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<ul>
+<li><strong>Example</strong>: Northwestern crow drops whelk from optimal height to minimize effort (drops) while breaking shell.</li>
+</ul>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
