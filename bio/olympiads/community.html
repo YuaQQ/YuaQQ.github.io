@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Community Ecology</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="community-ecology">Community Ecology</h1>
+<h1 id="community-ecology-1">Community Ecology</h1>
+<h2 id="interspecific-interactions">Interspecific Interactions</h2>
+<ul>
+<li><strong>Definition</strong>: Interactions between individuals of different species.</li>
+<li><strong>Impact</strong>: Affect survival &amp; reproduction → influence population growth rate (fitness).</li>
+<li><strong>Five Categories</strong>:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type of Interaction</th>
+<th>Effect on Species 1</th>
+<th>Effect on Species 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Competition</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Consumer‑Resource (Predation, Herbivory, Parasitism)</td>
+<td>+</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Mutualism</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td>Commensalism</td>
+<td>+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Amensalism</td>
+<td>–</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-competition-">1. Competition (–/–)</h2>
+<ul>
+<li><strong>Interspecific Competition</strong>: Occurs when species share limiting resources.</li>
+<li><strong>Competitive Exclusion Principle</strong>: Two species competing for the same limiting resource cannot coexist long‑term; one will outcompete the other, leading to extinction or niche shift.</li>
+<li><strong>Niche vs. Habitat</strong>:
+<ul>
+<li><strong>Habitat</strong>: Where a species lives (its “address”).</li>
+<li><strong>Niche</strong>: Role of a species in the ecosystem (its “job”).</li>
+</ul>
+</li>
+<li><strong>Realized Niche</strong>: Narrower niche a species actually occupies due to competition.</li>
+<li><strong>Resource Partitioning</strong>: Differentiation of ecological niches allowing similar species to coexist (e.g., lizards perching in sun vs. shade).</li>
+</ul>
+<h2 id="2-consumerresource-interactions-">2. Consumer‑Resource Interactions (+/–)</h2>
+<ul>
+<li><strong>Predation</strong>: Predator kills &amp; eats prey.
+<ul>
+<li><strong>Predator Adaptations</strong>: Claws, teeth, fangs, stingers, poison.</li>
+<li><strong>Prey Defenses</strong>:
+<ul>
+<li><strong>Cryptic Coloration</strong>: Camouflage.</li>
+<li><strong>Aposematic Coloration</strong>: Bright warning colors (indicates toxicity).</li>
+<li><strong>Mimicry</strong>:
+<ul>
+<li><strong>Batesian</strong>: Harmless species mimics harmful one.</li>
+<li><strong>Müllerian</strong>: Two unpalatable species mimic each other.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Herbivory</strong>: Consumer eats plants.</li>
+<li><strong>Parasitism</strong>: Parasite benefits at host’s expense.</li>
+</ul>
+<h2 id="3-mutualism-">3. Mutualism (+/+)</h2>
+<ul>
+<li>Both species benefit.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li>Leaf‑cutter ants &amp; cultivated fungi.</li>
+<li>Plants &amp; pollinators/seed‑dispersers.</li>
+<li>Humans &amp; gut bacteria.</li>
+<li>Mycorrhizae (fungus‑plant roots) in nutrient‑poor soils.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-commensalism-0">4. Commensalism (+/0)</h2>
+<ul>
+<li>One species benefits, other unaffected.</li>
+<li><strong>Example</strong>: Brown‑headed cowbirds following cattle to catch flushed insects.</li>
+</ul>
+<h2 id="5-amensalism-0">5. Amensalism (–/0)</h2>
+<ul>
+<li>One species harmed, other unaffected.</li>
+<li><strong>Example</strong>: Elephants crushing plants/insects while moving.</li>
+</ul>
+<h2 id="invasive-species">Invasive Species</h2>
+<ul>
+<li>Introduced species lacking natural enemies; reproduce/spread rapidly.</li>
+<li><strong>Negative Effects</strong>:
+<ul>
+<li>Crowd out native plants.</li>
+<li>Cause native species extinction.</li>
+<li>Alter native species interactions.</li>
+</ul>
+</li>
+</ul>
+<h2 id="evolutionary-outcomes-of-interactions">Evolutionary Outcomes of Interactions</h2>
+<ul>
+<li><strong>Intraspecific Competition</strong>: Leads to traits that improve resource acquisition (e.g., Galápagos finch beak size).</li>
+<li><strong>Interspecific Competition</strong>: Can drive resource partitioning via natural selection.</li>
+<li><strong>Consumer‑Resource “Arms Race”</strong>: Prey evolve better defenses; predators evolve better offenses.</li>
+<li><strong>Plant‑Herbivore Coevolution</strong>: Plants produce toxins; herbivores evolve detoxification.</li>
+<li><strong>Mutualism</strong>: Based on resource/service exchange, not altruism; fitness benefits vary with environment.</li>
+</ul>
+<h2 id="community-characteristics">Community Characteristics</h2>
+<ul>
+<li>
+<p><strong>Community</strong>: Group of species coexisting in a geographic area.</p>
+</li>
+<li>
+<p><strong>Species Diversity</strong>:</p>
+<ol>
+<li><strong>Species Richness</strong>: Number of species.</li>
+<li><strong>Relative Abundance</strong>: Proportion of each species.</li>
+</ol>
+</li>
+<li>
+<p><strong>Simpson’s Index of Diversity</strong>:</p>
+<p>!1768210715733.png</p>
+<ul>
+<li>D_s = diversity index.</li>
+<li>N = total individuals.</li>
+<li>n_i = individuals of species i.</li>
+</ul>
+</li>
+</ul>
+<h2 id="trophic-structure">Trophic Structure</h2>
+<ul>
+<li><strong>Food Chain</strong>: Linear energy transfer: producers → consumers → decomposers.</li>
+<li><strong>Food Web</strong>: Interconnected food chains; species may occupy multiple trophic levels.</li>
+<li><strong>Trophic Levels</strong>:
+<ul>
+<li>Primary producers (plants, phytoplankton).</li>
+<li>Primary consumers (herbivores).</li>
+<li>Secondary consumers (carnivores).</li>
+<li>Tertiary/quaternary consumers (top carnivores).</li>
+</ul>
+</li>
+</ul>
+<h2 id="limits-on-food-chain-length">Limits on Food Chain Length</h2>
+<ol>
+<li><strong>Energy Transfer Inefficiency</strong>: ~10% energy passed between trophic levels.</li>
+<li><strong>Biological Magnification</strong>: Toxins accumulate at higher trophic levels, reducing diversity.</li>
+</ol>
+<h2 id="keystone-species">Keystone Species</h2>
+<ul>
+<li>Species with disproportionately large impact on community structure.</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Top Predators</strong> (e.g., sea otter, sea star <em>Pisaster</em>).</li>
+<li><strong>Common Prey</strong> (e.g., Antarctic krill).</li>
+<li><strong>Ecosystem Engineers</strong> (e.g., beaver).</li>
+</ul>
+</li>
+<li><strong>Effect</strong>: Increase species diversity by controlling competitors/predators.</li>
+</ul>
+<h2 id="community-control-models">Community Control Models</h2>
+<ul>
+<li><strong>Bottom‑Up Model</strong>: Lower trophic levels (nutrients, producers) control community structure.</li>
+<li><strong>Top‑Down Model (Trophic Cascade)</strong>: Higher trophic levels (predators) control herbivores, which control producers.</li>
+</ul>
+<h2 id="disturbance--succession">Disturbance &amp; Succession</h2>
+<ul>
+<li><strong>Disturbance</strong>: Sudden environmental change (natural: fire, volcano; anthropogenic: logging, pollution).</li>
+<li><strong>Ecological Succession</strong>: Predictable species replacement over time.
+<ul>
+<li><strong>Primary Succession</strong>: Begins on lifeless, soil‑less surfaces (e.g., volcanic rock, glacial moraine).
+<ul>
+<li><strong>Pioneer Species</strong>: Lichens, mosses → grasses → shrubs → trees.</li>
+</ul>
+</li>
+<li><strong>Secondary Succession</strong>: Soil intact after disturbance (e.g., post‑fire).</li>
+</ul>
+</li>
+<li><strong>Climax Community</strong>: Stable, self‑perpetuating final stage; species composition depends on abiotic factors (climate, soil).</li>
+</ul>
+<h2 id="why-communities-change">Why Communities Change</h2>
+<ol>
+<li><strong>Colonization Ability</strong>: Early species are better dispersers (e.g., dung beetles, wind/sea‑dispersed seeds).</li>
+<li><strong>Environmental Changes Over Time</strong>: Conditions shift (e.g., light, moisture) favoring different species.</li>
+</ol>
+<h2 id="community-function">Community Function</h2>
+<ul>
+<li><strong>Primary Productivity</strong>:
+<ul>
+<li><strong>Gross Primary Productivity (GPP)</strong>: Total energy converted by producers.</li>
+<li><strong>Net Primary Productivity (NPP)</strong>: Energy stored in producer biomass available to consumers.</li>
+<li><strong>Equation</strong>: NPP = GPP – Respiration (R).</li>
+</ul>
+</li>
+<li><strong>Ecological Efficiency</strong>: ~10% energy transferred between trophic levels.</li>
+<li><strong>Diversity‑Productivity Relationship</strong>: Higher species diversity → greater &amp; more stable NPP.</li>
+</ul>
+<p>Practice Questions</p>
+
+            
+            
+        </body>
+        </html>
