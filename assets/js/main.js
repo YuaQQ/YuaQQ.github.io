@@ -254,36 +254,6 @@
 			});
 
 		}
-// ========== 手动绑定下拉菜单悬停事件 ==========
-(function() {
-    // 等待 DOM 加载完成
-    function initDropdowns() {
-        var dropdowns = document.querySelectorAll('#nav .dropdown');
-        
-        dropdowns.forEach(function(dropdown) {
-            var menu = dropdown.querySelector('.dropdown-menu');
-            if (!menu) return;
-            
-            // 鼠标进入时显示菜单
-            dropdown.addEventListener('mouseenter', function() {
-                menu.style.display = 'block';
-            });
-            
-            // 鼠标离开时隐藏菜单
-            dropdown.addEventListener('mouseleave', function() {
-                menu.style.display = 'none';
-            });
-        });
-        
-        console.log('下拉菜单已绑定，共找到 ' + dropdowns.length + ' 个下拉项');
-    }
-    
-    // 页面加载完成后执行
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initDropdowns);
-    } else {
-        initDropdowns();
-    }
-})();
+
 
 })(jQuery);
