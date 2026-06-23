@@ -34,7 +34,12 @@
 						<ul class="links">
 							<li class="active"><a href="https://yuaqq.github.io/meiosis/index.html">有性生殖：分裂大细胞</a></li>
 							<li><a href="https://custom2048.com/meiosis_game/">MEIOSIS: 2048</a></li>
-              				<li><a href="https://pan.baidu.com/s/14JSGsWxUbx34lRlzOM3lHg?pwd=LxuZ">Campbell下载</a></li>
+              				<li class="active dropdown">
+                                <a href="#campbell">Campbell下载</a>
+                                <ul class="dropdown-menu">
+									<li><a href="https://pan.baidu.com/s/14JSGsWxUbx34lRlzOM3lHg?pwd=LxuZ">下载链接</a></li>
+								</ul>
+                            </li>    
               				<li><a href="#真题下载">真题下载</a></li>
 						</ul>
 					
@@ -55,9 +60,11 @@
 									<hr />
 									<h3><a href="https://custom2048.com/meiosis_game/">Game: Meiosis 2048</a></h3>
 									<hr />
+                                    <div id="campbell">
 									<h3><a href="https://pan.baidu.com/s/14JSGsWxUbx34lRlzOM3lHg?pwd=LxuZ">Download Campbell Biology</a></h3>
                                     <a href="https://pan.baidu.com/s/14JSGsWxUbx34lRlzOM3lHg?pwd=LxuZ" class="image fit"><img src="https://yuaqq.github.io/images/bio/main/campbell.jpg" alt="" /></a>
 									<hr />
+                                    </div>
 									<h3 id="真题下载">真题下载链接</h3>
                                     <p><a href="https://pan.baidu.com/s/1_Gtwml_can_DY0vAv8Kt6Q?pwd=r5qt">2020 Practice 1 with answer</a></p>
                                     <p><a href="https://pan.baidu.com/s/1CEjbvNCOFpTcnq--yCP0vQ?pwd=ur1f">2020 Practice 2 with answer</a></p>
@@ -229,6 +236,8 @@
 								margin: 0;
 								z-index: 100000;
 								font-family: "Source Sans Pro", Helvetica, sans-serif;
+                                max-height: 80vh;
+                                overflow-y: auto;
 							`;
 							
 							// 菜单项样式
